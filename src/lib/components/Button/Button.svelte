@@ -1,16 +1,11 @@
 <script lang="ts">
-	interface $$Events {}
+	import type { Props } from './Button.props'
 
-	interface $$Props {}
-
-	interface $$Slots {
-		default: {};
-	}
+	let { children, variant = 'primary', ...props } = $props<Props>();
 </script>
 
-<button>
-	<slot />
+<button class="button button-{variant}" {...props}>
+	{@render children()}
 </button>
 
-<style>
-</style>
+<style src="./Button.css"></style>
