@@ -1,10 +1,10 @@
 <script lang="ts">
 	import './Button.css';
-	import type { Props } from './Button.props'
+	import type { ButtonProps } from './types';
 
-	let { children, variant = 'primary', ...props } = $props<Props>();
+	let { children, class: classname, variant = 'primary', ...props } = $props<ButtonProps>();
 </script>
 
-<button class="button button-{variant}" {...props}>
+<button class="button button-{variant} {classname}" {...props}>
 	{@render children()}
 </button>

@@ -1,0 +1,31 @@
+.accordion {
+}
+
+.accordion-item {
+}
+
+.accordion-item:not(.open) .accordion-body {
+	height: 0;
+	overflow: hidden;
+}
+
+.accordion-item.open .accordion-body {
+	height: auto;
+	overflow: auto;
+}
+
+.accordion-header {
+	margin: 0;
+	padding: 0;
+}
+
+.accordion-button {
+	display: block;
+	font: inherit;
+	padding: 0;
+	text-align: start;
+	width: 100%;
+}
+
+.accordion-body {
+}

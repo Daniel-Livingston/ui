@@ -1,16 +1,23 @@
 <script lang="ts">
-	interface $$Events {}
+	import type { AccordionItemProps } from './types';
+	import AccordionBody from './AccordionBody.svelte';
+	import AccordionHeader from './AccordionHeader.svelte';
 
-	interface $$Props {}
-
-	interface $$Slots {
-		default: {};
-	}
+	let {
+		id,
+		label,
+		open = false,
+		children,
+		class: classname,
+		...props
+	} = $props<AccordionItemProps>();
 </script>
 
-<div class="accordion-item">
-	<slot />
+<div class="accordion-item {classname}" class:open {...props}>
+	<AccordionHeader onclick={() => (open = !open)} aria-controls="{id}-body" aria-expanded={open}
+		>{label}</AccordionHeader
+	>
+	<AccordionBody id="{id}-body" {open}>
+		{@render children()}
+	</AccordionBody>
 </div>
-
-<style>
-</style>

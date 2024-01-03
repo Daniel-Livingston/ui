@@ -1,16 +1,13 @@
 <script lang="ts">
-	interface $$Events {}
+	import './Accordion.css';
+	import type { AccordionProps } from './types';
+	import { setContext } from 'svelte';
 
-	interface $$Props {}
+	let { children, class: classname, headingLevel = 2, ...props } = $props<AccordionProps>();
 
-	interface $$Slots {
-		default: {};
-	}
+	setContext('accordion-heading-level', headingLevel);
 </script>
 
-<div class="accordion">
-	<slot />
+<div class="accordion {classname}" {...props}>
+	{@render children()}
 </div>
-
-<style>
-</style>

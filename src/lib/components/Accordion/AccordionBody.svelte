@@ -1,14 +1,9 @@
 <script lang="ts">
-	interface $$Events {}
+	import type { AccordionBodyProps } from "./types";
 
-	interface $$Props {}
-
-	interface $$Slots {
-		default: {};
-	}
+	let { children, class: classname, ...props } = $props<AccordionBodyProps>();
 </script>
 
-<slot />
-
-<style>
-</style>
+<div class="accordion-body {classname}" {...props}>
+	{@render children()}
+</div>

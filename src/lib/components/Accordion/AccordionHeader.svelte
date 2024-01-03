@@ -1,14 +1,14 @@
 <script lang="ts">
-	interface $$Events {}
+	import type { AccordionHeaderProps } from './types';
+	import { getContext } from 'svelte';
 
-	interface $$Props {}
+	let { children, ...props } = $props<AccordionHeaderProps>();
 
-	interface $$Slots {
-		default: {};
-	}
+	const headingLevel = getContext<1 | 2 | 3 | 4 | 5 | 6>('accordion-heading-level');
 </script>
 
-<slot />
-
-<style>
-</style>
+<svelte:element this={`h${headingLevel}`} class="accordion-header">
+	<button class="accordion-button" type="button" {...props}>
+		{@render children()}
+	</button>
+</svelte:element>

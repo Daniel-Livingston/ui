@@ -21,7 +21,7 @@
 			"types": "./dist/index.d.ts",
 			"svelte": "./dist/index.js"
 		},
-		"./style.css": "./dist/style.css"
+		"./style.css": "./dist/styles.css"
 	},
 	"files": [
 		"dist",
