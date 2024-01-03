@@ -1,16 +1,24 @@
 <script lang="ts">
-	interface $$Events {}
+	import './Alert.css';
+	import type { AlertProps } from './types';
+	import { Button } from '$lib/components/Button';
 
-	interface $$Props {}
+	let { dismissible, onDismiss, variant, class: classname, ...props } = $props<AlertProps>();
 
-	interface $$Slots {
-		default: {};
-	}
+	let dismissed = $state(false);
 </script>
 
-<div class="alert">
+<div class="alert {classname}" class:dismissed {...props}>
 	<slot />
-</div>
 
-<style>
-</style>
+	{#if dismissible}
+		<Button
+			{variant}
+			onclick={() => {
+				dismissed = true;
+				onDismiss && onDismiss();
+			}}
+			close
+		/>
+	{/if}
+</div>

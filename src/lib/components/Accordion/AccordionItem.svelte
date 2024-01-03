@@ -3,21 +3,14 @@
 	import AccordionBody from './AccordionBody.svelte';
 	import AccordionHeader from './AccordionHeader.svelte';
 
-	let {
-		id,
-		label,
-		open = false,
-		children,
-		class: classname,
-		...props
-	} = $props<AccordionItemProps>();
+	let { id, label, open = false, class: classname, ...props } = $props<AccordionItemProps>();
 </script>
 
 <div class="accordion-item {classname}" class:open {...props}>
-	<AccordionHeader onclick={() => (open = !open)} aria-controls="{id}-body" aria-expanded={open}
-		>{label}</AccordionHeader
-	>
+	<AccordionHeader onclick={() => (open = !open)} aria-controls="{id}-body" aria-expanded={open}>
+		{label}
+	</AccordionHeader>
 	<AccordionBody id="{id}-body" {open}>
-		{@render children()}
+		<slot />
 	</AccordionBody>
 </div>

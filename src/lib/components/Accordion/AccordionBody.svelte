@@ -1,9 +1,9 @@
 <script lang="ts">
-	import type { AccordionBodyProps } from "./types";
+	import type { AccordionBodyProps } from './types';
 
-	let { children, class: classname, ...props } = $props<AccordionBodyProps>();
+	let { class: classname, ...props } = $props<AccordionBodyProps>();
 </script>
 
 <div class="accordion-body {classname}" {...props}>
-	{@render children()}
+	<slot />
 </div>

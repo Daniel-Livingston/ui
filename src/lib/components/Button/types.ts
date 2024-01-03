@@ -1,7 +1,7 @@
-import type { Snippet } from 'svelte';
 import type { HTMLButtonAttributes } from 'svelte/elements';
+import type { Variant } from '$lib/internal/types';
 
 export interface ButtonProps extends HTMLButtonAttributes {
-	children: Snippet<void>;
-	variant?: 'primary' | 'secondary' | 'success' | 'danger' | 'warning' | 'info' | 'light' | 'dark';
+	close?: boolean;
+	variant?: Variant;
 }

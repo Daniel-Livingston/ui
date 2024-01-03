@@ -3,11 +3,11 @@
 	import type { AccordionProps } from './types';
 	import { setContext } from 'svelte';
 
-	let { children, class: classname, headingLevel = 2, ...props } = $props<AccordionProps>();
+	let { class: classname, headingLevel = 2, ...props } = $props<AccordionProps>();
 
 	setContext('accordion-heading-level', headingLevel);
 </script>
 
 <div class="accordion {classname}" {...props}>
-	{@render children()}
+	<slot />
 </div>
