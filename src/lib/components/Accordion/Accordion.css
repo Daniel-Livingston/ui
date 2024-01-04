@@ -5,6 +5,8 @@
 .accordion__item {
 	border: var(--border-width-accordion-button, 1px) solid
 		var(--border-color-accordion-button, rgba(var(--_color-dark-rgb), 0.2));
+	border-left: none;
+	border-right: none;
 }
 
 .accordion__item + .accordion__item {
