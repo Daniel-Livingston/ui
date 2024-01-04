@@ -4,7 +4,6 @@
 	import multilineExampleCode from './examples/Multiline.svelte?raw';
 	import InlineExample from './examples/Inline.svelte';
 	import inlineExampleCode from './examples/Inline.svelte?raw';
-	import 'highlight.js/styles/default.css';
 </script>
 
 <Heading level={2}>Overview</Heading>

@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { CodeSnippet, Text } from '$lib';
-	import 'highlight.js/styles/default.css';
 </script>
 
 <Text>

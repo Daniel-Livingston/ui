@@ -1,9 +1,8 @@
 <script lang="ts">
 	import { CodeSnippet, Demo, Heading, Text } from '$lib';
-	import { fixCodeSnippets } from '$lib/internal/code';
+	import { fixCodeSnippet } from '$lib/internal/code';
 	import Example1 from './examples/BasicUsage.svelte';
 	import example1Code from './examples/BasicUsage.svelte?raw';
-	import 'highlight.js/styles/default.css';
 </script>
 
 <Heading level={2}>Overview</Heading>
@@ -21,4 +20,4 @@
 	<Example1 />
 </Demo>
 
-<CodeSnippet code={fixCodeSnippets(example1Code)} lang="html" highlighted />
+<CodeSnippet code={fixCodeSnippet(example1Code)} lang="html" highlighted />

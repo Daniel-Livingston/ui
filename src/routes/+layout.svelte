@@ -4,6 +4,7 @@
 	import '$lib/styles/reset.css';
 	import '$lib/styles/variables.css';
 	import '$lib/styles/base.css';
+	import 'highlight.js/styles/default.css';
 
 	import { Heading, SideNav, Text } from '$lib';
 </script>

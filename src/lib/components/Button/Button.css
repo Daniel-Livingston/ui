@@ -18,3 +18,7 @@
 .button:disabled {
 	cursor: not-allowed;
 }
+
+.button.close {
+	padding: 0.25rem;
+}
