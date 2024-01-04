@@ -1,7 +1,13 @@
 <script lang="ts">
-	import { CodeSnippet } from '$lib';
+	import { CodeSnippet, Heading, Text } from '$lib';
 	import 'highlight.js/styles/default.css';
 </script>
+
+<Heading level={1}>Code snippet</Heading>
+
+<Text size="large">
+	Code snippets are used to display code examples, typically in documentation.
+</Text>
 
 <CodeSnippet
 	code={`{
@@ -29,4 +35,6 @@
 	highlighted
 />
 
-asdf
+<Heading level={2}>Overview</Heading>
+
+<Text>There are three different variants of code snippets.</Text>

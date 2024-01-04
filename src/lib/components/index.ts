@@ -8,6 +8,7 @@ export { Code, Code as CodeSnippet } from './Code';
 export { Carousel } from './Carousel';
 export { DataTable } from './DataTable';
 export { Dropdown } from './Dropdown';
+export { Heading } from './Heading';
 export {
 	Checkbox,
 	DatePicker,
@@ -31,5 +32,6 @@ export { Pagination } from './Pagination';
 export { Progress, ProgressBar, ProgressIndicator } from './Progress';
 export { Search } from './Search';
 export { Tabs } from './Tabs';
+export { Text } from './Text';
 export { Toast as Notification, Toast } from './Toast';
 export { TreeView } from './TreeView';
