@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { CodeSnippet, Heading, Text } from '$lib';
+	import { CodeSnippet, Demo, Heading, Text } from '$lib';
 	import example1 from './examples/usage-1.html?raw';
 	import example2 from './examples/usage-2.html?raw';
 	import 'highlight.js/styles/default.css';
@@ -26,13 +26,17 @@
 	documentation:
 </Text>
 
-<CodeSnippet
-	code={`function add(a: number, b: number): number {
-		return a + b;
-	}`}
-	lang="typescript"
-	highlighted
-/>
+<div style:--padding-block-start-code="0">
+	<Demo>
+		<CodeSnippet
+			code={`function add(a: number, b: number): number {
+	return a + b;
+}`}
+			lang="typescript"
+			highlighted
+		/>
+	</Demo>
+</div>
 
 <Text>We will want to use the following code:</Text>
 

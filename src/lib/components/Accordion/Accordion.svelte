@@ -4,7 +4,7 @@
 	import { setContext } from 'svelte';
 	import classNames from 'classnames';
 
-	let { class: classname, headingLevel = 2, ...props } = $props<AccordionProps>();
+	let { headingLevel = 2, class: classname, ...props } = $props<AccordionProps>();
 
 	setContext('accordion-heading-level', headingLevel);
 </script>

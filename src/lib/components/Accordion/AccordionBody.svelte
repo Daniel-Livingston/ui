@@ -13,5 +13,7 @@
 		controller
 	}}
 >
-	<slot />
+	<div>
+		<slot />
+	</div>
 </div>
