@@ -12,9 +12,9 @@
 
 .side-nav {
 	border-top: var(--side-nav-border-width, 1px) solid
-		var(--side-nav-border-color, var(--_color-light));
+		var(--side-nav-border-color, rgba(var(--_color-dark-rgb), 0.2));
 	border-right: var(--side-nav-border-width, 1px) solid
-		var(--side-nav-border-color, var(--_color-light));
+		var(--side-nav-border-color, rgba(var(--_color-dark-rgb), 0.2));
 	overflow-y: auto;
 }
 

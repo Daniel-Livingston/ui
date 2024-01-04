@@ -1,10 +1,17 @@
 <script lang="ts">
+	import { page } from '$app/stores';
+
 	import '$lib/styles/reset.css';
 	import '$lib/styles/variables.css';
 	import '$lib/styles/base.css';
 
-	import { SideNav } from '$lib';
+	import { Heading, SideNav } from '$lib';
 </script>
+
+<svelte:head>
+	<title>{$page.data.title}</title>
+	<meta name="description" content={$page.data.description} />
+</svelte:head>
 
 <div class="grid">
 	<SideNav class="sidebar">
@@ -19,11 +26,31 @@
 		</SideNav.Menu>
 	</SideNav>
 	<main class="main readable">
-		<slot />
+		<div class="header">
+			<Heading level={1}>{$page.data.title}</Heading>
+		</div>
+
+		<div class="content">
+			<slot />
+		</div>
 	</main>
 </div>
 
 <style>
+	.header,
+	.content {
+		background-color: var(--_color-light);
+		padding-inline: 1rem;
+	}
+
+	.header {
+		border-bottom: 1px solid rgba(var(--_color-dark-rgb), 0.2);
+	}
+
+	.content {
+		padding-bottom: 3rem;
+	}
+
 	@media (min-width: 768px) {
 		.grid {
 			display: grid;
@@ -39,6 +66,13 @@
 		.main {
 			grid-area: main;
 			overflow-y: auto;
+		}
+	}
+
+	@media (min-width: 992px) {
+		.header,
+		.content {
+			padding-inline: 5rem;
 		}
 	}
 </style>

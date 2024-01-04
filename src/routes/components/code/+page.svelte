@@ -5,8 +5,6 @@
 	import 'highlight.js/styles/default.css';
 </script>
 
-<Heading level={1}>Code snippet</Heading>
-
 <Text size="xl">Code snippets are used to display code examples, typically in documentation.</Text>
 
 <Heading level={2}>Overview</Heading>
@@ -30,8 +28,8 @@
 
 <CodeSnippet
 	code={`function add(a: number, b: number): number {
-	return a + b;
-}`}
+		return a + b;
+	}`}
 	lang="typescript"
 	highlighted
 />

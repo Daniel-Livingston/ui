@@ -4,40 +4,29 @@
 }
 
 .text {
+	--_padding-block-start: var(--padding-block-start-text, 1.5rem);
+	padding-block-start: var(--_padding-block-start);
 	width: 100%;
-}
-
-* + .text {
-	margin-block-start: var(--_margin-block-start);
-	margin-block-end: var(--_margin-block-end);
 }
 
 .text-xs {
 	font-size: var(--_font-size-xs);
-	--_margin-block-start: var(--margin-block-start-text-xs, 1rem);
-	--_margin-block-end: var(--margin-block-end-text-xs, 1rem);
 }
 
 .text-sm {
 	font-size: var(--_font-size-sm);
-	--_margin-block-start: var(--margin-block-start-text-sm, 1rem);
-	--_margin-block-end: var(--margin-block-end-text-sm, 1rem);
 }
 
 .text-md {
 	font-size: var(--_font-size-base);
-	--_margin-block-start: var(--margin-block-start-text-md, 1rem);
-	--_margin-block-end: var(--margin-block-end-text-md, 1rem);
 }
 
 .text-lg {
 	font-size: var(--_font-size-lg);
-	--_margin-block-start: var(--margin-block-start-text-lg, 1rem);
-	--_margin-block-end: var(--margin-block-end-text-lg, 1rem);
 }
 
 .text-xl {
+	--_padding-block-start: var(--padding-block-start-text, 3rem);
+
 	font-size: var(--_font-size-xl);
-	--_margin-block-start: var(--margin-block-start-text-xl, 1rem);
-	--_margin-block-end: var(--margin-block-end-text-xl, 1rem);
 }

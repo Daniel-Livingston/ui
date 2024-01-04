@@ -1,15 +1,26 @@
 :root {
 	/* Colors and theming */
-	--_color-primary: var(--color-primary, #007bff);
-	--_color-secondary: var(--color-secondary, #6c757d);
-	--_color-success: var(--color-success, #28a745);
-	--_color-info: var(--color-info, #17a2b8);
-	--_color-warning: var(--color-warning, #ffc107);
-	--_color-danger: var(--color-danger, #dc3545);
-	--_color-light: var(--color-light, #f8f9fa);
-	--_color-dark: var(--color-dark, #343a40);
-	--_color-white: var(--color-white, #fff);
-	--_color-black: var(--color-black, #000);
+	--_color-primary-rgb: var(--color-primary-rgb, 0, 123, 255);
+	--_color-secondary-rgb: var(--color-secondary-rgb, 108, 117, 125);
+	--_color-success-rgb: var(--color-success-rgb, 40, 167, 69);
+	--_color-info-rgb: var(--color-info-rgb, 23, 162, 184);
+	--_color-warning-rgb: var(--color-warning-rgb, 255, 193, 7);
+	--_color-danger-rgb: var(--color-danger-rgb, 220, 53, 69);
+	--_color-light-rgb: var(--color-light-rgb, 248, 249, 250);
+	--_color-dark-rgb: var(--color-dark-rgb, 52, 58, 64);
+	--_color-white-rgb: var(--color-white-rgb, 255, 255, 255);
+	--_color-black-rgb: var(--color-black-rgb, 0, 0, 0);
+
+	--_color-primary: var(--color-primary, rgb(var(--_color-primary-rgb)));
+	--_color-secondary: var(--color-secondary, rgb(var(--_color-secondary-rgb)));
+	--_color-success: var(--color-success, rgb(var(--_color-success-rgb)));
+	--_color-info: var(--color-info, rgb(var(--_color-info-rgb)));
+	--_color-warning: var(--color-warning, rgb(var(--_color-warning-rgb)));
+	--_color-danger: var(--color-danger, rgb(var(--_color-danger-rgb)));
+	--_color-light: var(--color-light, rgb(var(--_color-light-rgb)));
+	--_color-dark: var(--color-dark, rgb(var(--_color-dark-rgb)));
+	--_color-white: var(--color-white, rgb(var(--_color-white-rgb)));
+	--_color-black: var(--color-black, rgb(var(--_color-black-rgb)));
 
 	/* Typography */
 	--_font-family-sans-serif: var(
