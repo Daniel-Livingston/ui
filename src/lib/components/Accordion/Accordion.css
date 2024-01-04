@@ -1,7 +1,3 @@
-.accordion {
-	background-color: var(--background-color-accordion, var(--_color-white));
-}
-
 .accordion__item {
 	border: var(--border-width-accordion-button, 1px) solid
 		var(--border-color-accordion-button, rgba(var(--_color-dark-rgb), 0.2));
