@@ -1,14 +1,9 @@
 <script lang="ts">
-	interface $$Events {}
+	import './Link.css';
+	import type { LinkProps } from './types';
+	import classNames from 'classnames';
 
-	interface $$Props {}
-
-	interface $$Slots {
-		default: {};
-	}
+	let { class: classname, ...props } = $props<LinkProps>();
 </script>
 
-<slot />
-
-<style>
-</style>
+<a class={classNames('link', classname)} {...props}><slot /></a>

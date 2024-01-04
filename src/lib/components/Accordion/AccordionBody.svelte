@@ -1,9 +1,17 @@
 <script lang="ts">
 	import type { AccordionBodyProps } from './types';
+	import { collapse } from '$lib/actions';
 
-	let { class: classname, ...props } = $props<AccordionBodyProps>();
+	let { controller, open, ...props } = $props<AccordionBodyProps>();
 </script>
 
-<div class="accordion-body {classname}" {...props}>
+<div
+	class="accordion__body"
+	{...props}
+	use:collapse={{
+		collapsed: !open,
+		controller
+	}}
+>
 	<slot />
 </div>

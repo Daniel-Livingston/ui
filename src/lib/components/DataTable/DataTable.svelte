@@ -1,14 +1,11 @@
 <script lang="ts">
-	interface $$Events {}
+	import './DataTable.css';
+	import type { DataTableProps } from './types';
+	import classNames from 'classnames';
 
-	interface $$Props {}
-
-	interface $$Slots {
-		default: {};
-	}
+	let { columns, rows, class: classname, ...props } = $props<DataTableProps>();
 </script>
 
-<slot />
-
-<style>
-</style>
+<table class={classNames('table', classname)} {...props}>
+	<slot />
+</table>

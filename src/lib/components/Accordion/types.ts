@@ -1,5 +1,5 @@
 import type { Snippet } from 'svelte';
-import type { MouseEventHandler, HTMLAttributes } from 'svelte/elements';
+import type { HTMLAttributes } from 'svelte/elements';
 
 export interface AccordionProps extends HTMLAttributes<HTMLDivElement> {
 	children: Snippet<void>;
@@ -14,13 +14,13 @@ export interface AccordionItemProps extends HTMLAttributes<HTMLDivElement> {
 }
 
 export interface AccordionHeaderProps {
-	'aria-controls': string;
-	'aria-expanded': boolean;
-	onclick: MouseEventHandler<HTMLButtonElement>;
 	children: Snippet<void>;
+	ref: HTMLButtonElement;
+	open: boolean;
 }
 
 export interface AccordionBodyProps extends HTMLAttributes<HTMLDivElement> {
 	children: Snippet<void>;
-	open?: boolean;
+	controller: HTMLButtonElement;
+	open: boolean;
 }

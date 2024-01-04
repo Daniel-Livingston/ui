@@ -1,13 +1,12 @@
 <script lang="ts">
+	import './Code.css';
 	import type { CodeProps } from './types';
 
 	let { code, lang, highlighted = false, inline = false } = $props<CodeProps>();
 </script>
 
 {#snippet codeMarkdown(contents)}
-	<pre class="code">
-		<code class="hljs language-{lang}">{@html contents}</code>
-	</pre>
+	<pre class="code"><code class="hljs language-{lang}">{@html contents}</code></pre>
 {/snippet}
 
 {#if inline}

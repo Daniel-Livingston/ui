@@ -1,0 +1,34 @@
+.side-nav {
+}
+
+.side-nav__items {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.side-nav__item {
+}
+
+.side-nav__menu-button {
+	align-items: center;
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.side-nav__menu-button {
+}
+
+.side-nav__menu-button.closed {
+}
+
+.side-nav__menu {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	padding-inline-start: 1.5rem;
+}
+
+.side-nav__link {
+}

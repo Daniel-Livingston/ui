@@ -7,3 +7,17 @@ code,
 .monospace {
 	font-family: var(--_font-family-monospace);
 }
+
+main {
+	overflow: auto;
+}
+
+.collapsible {
+	height: auto;
+	overflow: auto;
+}
+
+.collapsible.collapsed {
+	height: 0;
+	overflow: hidden;
+}

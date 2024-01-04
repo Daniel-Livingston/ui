@@ -4,13 +4,15 @@
 	import AccordionHeader from './AccordionHeader.svelte';
 
 	let { id, label, open = false, class: classname, ...props } = $props<AccordionItemProps>();
+
+	let controller: HTMLButtonElement;
 </script>
 
-<div class="accordion-item {classname}" class:open {...props}>
-	<AccordionHeader onclick={() => (open = !open)} aria-controls="{id}-body" aria-expanded={open}>
+<div class="accordion__item {classname}" {...props}>
+	<AccordionHeader bind:ref={controller} bind:open>
 		{label}
 	</AccordionHeader>
-	<AccordionBody id="{id}-body" {open}>
+	<AccordionBody id="{id}-body" {controller} {open}>
 		<slot />
 	</AccordionBody>
 </div>
