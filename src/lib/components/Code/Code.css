@@ -4,7 +4,5 @@ pre.readable.code {
 }
 
 pre.code {
-	--_padding-block-start: var(--padding-block-start-code, 1.5rem);
-	padding-block-start: var(--_padding-block-start);
 	tab-size: var(--tab-size-code, 2);
 }

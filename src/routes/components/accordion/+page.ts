@@ -4,6 +4,6 @@ export const load: PageLoad = async () => {
 	return {
 		title: 'Accordion',
 		description:
-			'The accordion component can be used to optionally display content, typically in a list.'
+			'Accordions can be used to optionally reveal or hide sections of content. This is typically done through user interaction.'
 	};
 };

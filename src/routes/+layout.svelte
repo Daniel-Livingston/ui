@@ -5,7 +5,7 @@
 	import '$lib/styles/variables.css';
 	import '$lib/styles/base.css';
 
-	import { Heading, SideNav } from '$lib';
+	import { Heading, SideNav, Text } from '$lib';
 </script>
 
 <svelte:head>
@@ -31,6 +31,10 @@
 		</div>
 
 		<div class="content">
+			<div class="description">
+				<Text size="xl">{$page.data.description}</Text>
+			</div>
+
 			<slot />
 		</div>
 	</main>

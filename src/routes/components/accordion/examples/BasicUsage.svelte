@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Accordion } from '@daniel-livingston/components';
+	import { Accordion } from '$lib';
 </script>
 
 <Accordion>

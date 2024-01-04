@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { CodeSnippet } from '@daniel-livingston/components';
+	import { CodeSnippet } from '$lib';
 	import 'highlight.js/styles/default.css';
 
 	const code = `function add(a: number, b: number): number {
@@ -7,4 +7,4 @@
 }`;
 </script>
 
-<CodeSnippet code="{code}" lang="typescript" highlighted />
+<CodeSnippet {code} lang="typescript" highlighted />
