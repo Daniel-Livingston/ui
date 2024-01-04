@@ -4,6 +4,7 @@ export { Badge, Badge as Tag } from './Badge';
 export { Breadcrumb } from './Breadcrumb';
 export { Button } from './Button';
 export { Card } from './Card';
+export { Code, Code as CodeSnippet } from './Code';
 export { Carousel } from './Carousel';
 export { DataTable } from './DataTable';
 export { Dropdown } from './Dropdown';

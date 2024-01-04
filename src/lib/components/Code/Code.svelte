@@ -1,14 +1,23 @@
 <script lang="ts">
-	interface $$Events {}
+	import type { CodeProps } from './types';
 
-	interface $$Props {}
-
-	interface $$Slots {
-		default: {};
-	}
+	let { code, lang, highlighted = false, inline = false } = $props<CodeProps>();
 </script>
 
-<slot />
+{#snippet codeMarkdown(contents)}
+	<pre class="code">
+		<code class="hljs language-{lang}">{@html contents}</code>
+	</pre>
+{/snippet}
 
-<style>
-</style>
+{#if inline}
+	<code class="code">{code}</code>
+{:else if !highlighted}
+	{@render codeMarkdown(code)}
+{:else}
+	{#await import('./highlight')}
+		{@render codeMarkdown(code)}
+	{:then { highlight }}
+		{@render codeMarkdown(highlight(code, lang))}
+	{/await}
+{/if}
