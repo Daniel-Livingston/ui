@@ -58,6 +58,7 @@
 	"types": "./dist/index.d.ts",
 	"type": "module",
 	"dependencies": {
+		"classnames": "^2.5.1",
 		"hljs": "^6.2.3"
 	}
 }

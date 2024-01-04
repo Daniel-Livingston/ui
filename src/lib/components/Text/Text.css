@@ -1,0 +1,16 @@
+.text {
+	max-width: 65ch;
+	width: 100%;
+}
+
+.text-small {
+	font-size: var(--_font-size-small);
+}
+
+.text-medium {
+	font-size: var(--_font-size-base);
+}
+
+.text-large {
+	font-size: var(--_font-size-large);
+}

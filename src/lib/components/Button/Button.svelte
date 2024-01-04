@@ -1,19 +1,20 @@
 <script lang="ts">
 	import './Button.css';
 	import type { ButtonProps } from './types';
+	import classnames from 'classnames';
 
 	let {
 		'aria-label': ariaLabel,
 		close = false,
 		type = 'button',
-		variant = 'primary',
+		variant,
 		class: classname,
 		...props
 	} = $props<ButtonProps>();
 </script>
 
 <button
-	class="button button-{variant} {classname}"
+	class={classnames('button', { [`button-${variant}`]: !!variant }, classname)}
 	class:close
 	{type}
 	aria-label={ariaLabel ? ariaLabel : close ? 'Close' : undefined}

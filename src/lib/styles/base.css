@@ -1,0 +1,9 @@
+body,
+.sans-serif {
+	font-family: var(--_font-family-sans-serif);
+}
+
+code,
+.monospace {
+	font-family: var(--_font-family-monospace);
+}

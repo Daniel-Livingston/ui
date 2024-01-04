@@ -1,3 +1,20 @@
 .button {
+	background-color: var(--_button-background-color, transparent);
+	border: var(--_button-border-width, 1px) solid var(--_button-border-color, transparent);
+	color: var(--_button-text-color, var(--_color-black));
 	padding: 0.5rem 1rem;
+}
+
+.button-primary {
+	--_button-background-color: var(--_color-primary);
+	--_button-border-color: var(--_color-primary);
+	--_button-text-color: var(--_color-white);
+}
+
+.button:not(:disabled) {
+	cursor: pointer;
+}
+
+.button:disabled {
+	cursor: not-allowed;
 }
