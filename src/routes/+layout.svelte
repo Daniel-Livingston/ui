@@ -18,25 +18,27 @@
 			<SideNav.Link href="/components/code">Code</SideNav.Link>
 		</SideNav.Menu>
 	</SideNav>
-	<main class="main">
+	<main class="main readable">
 		<slot />
 	</main>
 </div>
 
 <style>
-	.grid {
-		display: grid;
-		grid-template-columns: 250px 1fr;
-		grid-template-rows: 1fr;
-		grid-template-areas: 'sidebar main';
-	}
+	@media (min-width: 768px) {
+		.grid {
+			display: grid;
+			grid-template-columns: 250px 1fr;
+			grid-template-rows: 1fr;
+			grid-template-areas: 'sidebar main';
+		}
 
-	.sidebar {
-		grid-area: sidebar;
-	}
+		.sidebar {
+			grid-area: sidebar;
+		}
 
-	.main {
-		grid-area: main;
-		padding: 1rem;
+		.main {
+			grid-area: main;
+			overflow-y: auto;
+		}
 	}
 </style>

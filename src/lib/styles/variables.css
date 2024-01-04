@@ -46,13 +46,44 @@
 		monospace
 	);
 
+	--_font-family-h1: var(--font-family-h1, var(--_font-family-sans-serif));
+	--_font-family-h2: var(--font-family-h2, var(--_font-family-sans-serif));
+	--_font-family-h3: var(--font-family-h3, var(--_font-family-sans-serif));
+	--_font-family-h4: var(--font-family-h4, var(--_font-family-sans-serif));
+	--_font-family-h5: var(--font-family-h5, var(--_font-family-sans-serif));
+	--_font-family-h6: var(--font-family-h6, var(--_font-family-sans-serif));
+
 	--_font-size-h1: var(--font-size-h1, 2.5rem);
 	--_font-size-h2: var(--font-size-h2, 2rem);
 	--_font-size-h3: var(--font-size-h3, 1.75rem);
 	--_font-size-h4: var(--font-size-h4, 1.5rem);
 	--_font-size-h5: var(--font-size-h5, 1.25rem);
 	--_font-size-h6: var(--font-size-h6, 1rem);
+
+	--_font-weight-h1: var(--font-weight-h1, 700);
+	--_font-weight-h2: var(--font-weight-h2, 700);
+	--_font-weight-h3: var(--font-weight-h3, 700);
+	--_font-weight-h4: var(--font-weight-h4, 700);
+	--_font-weight-h5: var(--font-weight-h5, 700);
+	--_font-weight-h6: var(--font-weight-h6, 700);
+
+	--_line-height-h1: var(--line-height-h1, 1.5);
+	--_line-height-h2: var(--line-height-h2, 1.5);
+	--_line-height-h3: var(--line-height-h3, 1.5);
+	--_line-height-h4: var(--line-height-h4, 1.5);
+	--_line-height-h5: var(--line-height-h5, 1.5);
+	--_line-height-h6: var(--line-height-h6, 1.5);
+
+	--_color-h1: var(--color-h1, var(--_color-black));
+	--_color-h2: var(--color-h2, var(--_color-black));
+	--_color-h3: var(--color-h3, var(--_color-black));
+	--_color-h4: var(--color-h4, var(--_color-black));
+	--_color-h5: var(--color-h5, var(--_color-black));
+	--_color-h6: var(--color-h6, var(--_color-black));
+
+	--_font-size-xs: var(--font-size-xs, 0.75rem);
+	--_font-size-sm: var(--font-size-sm, 0.875rem);
 	--_font-size-base: var(--font-size-base, 1rem);
-	--_font-size-small: var(--font-size-small, 0.875rem);
-	--_font-size-large: var(--font-size-large, 1.25rem);
+	--_font-size-lg: var(--font-size-lg, 1.25rem);
+	--_font-size-xl: var(--font-size-xl, 1.5rem);
 }

@@ -1,16 +1,43 @@
+.readable .text,
+.readable.text {
+	max-width: 35rem;
+}
+
 .text {
-	max-width: 65ch;
 	width: 100%;
 }
 
-.text-small {
-	font-size: var(--_font-size-small);
+* + .text {
+	margin-block-start: var(--_margin-block-start);
+	margin-block-end: var(--_margin-block-end);
 }
 
-.text-medium {
+.text-xs {
+	font-size: var(--_font-size-xs);
+	--_margin-block-start: var(--margin-block-start-text-xs, 1rem);
+	--_margin-block-end: var(--margin-block-end-text-xs, 1rem);
+}
+
+.text-sm {
+	font-size: var(--_font-size-sm);
+	--_margin-block-start: var(--margin-block-start-text-sm, 1rem);
+	--_margin-block-end: var(--margin-block-end-text-sm, 1rem);
+}
+
+.text-md {
 	font-size: var(--_font-size-base);
+	--_margin-block-start: var(--margin-block-start-text-md, 1rem);
+	--_margin-block-end: var(--margin-block-end-text-md, 1rem);
 }
 
-.text-large {
-	font-size: var(--_font-size-large);
+.text-lg {
+	font-size: var(--_font-size-lg);
+	--_margin-block-start: var(--margin-block-start-text-lg, 1rem);
+	--_margin-block-end: var(--margin-block-end-text-lg, 1rem);
+}
+
+.text-xl {
+	font-size: var(--_font-size-xl);
+	--_margin-block-start: var(--margin-block-start-text-xl, 1rem);
+	--_margin-block-end: var(--margin-block-end-text-xl, 1rem);
 }

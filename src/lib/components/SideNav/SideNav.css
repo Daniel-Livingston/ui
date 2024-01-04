@@ -1,8 +1,21 @@
+@media (max-width: 767px) {
+	.side-nav {
+		display: none;
+	}
+}
+
+@media (min-width: 768px) {
+	.side-nav {
+		display: block;
+	}
+}
+
 .side-nav {
 	border-top: var(--side-nav-border-width, 1px) solid
 		var(--side-nav-border-color, var(--_color-light));
 	border-right: var(--side-nav-border-width, 1px) solid
 		var(--side-nav-border-color, var(--_color-light));
+	overflow-y: auto;
 }
 
 .side-nav__items {

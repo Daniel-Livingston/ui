@@ -1,0 +1,10 @@
+.readable pre.code,
+pre.readable.code {
+	max-width: 45rem;
+}
+
+pre.code {
+	margin-block-start: var(--margin-block-start-code, 1.5rem);
+	margin-block-end: var(--margin-block-end-code, 1.5rem);
+	tab-size: var(--tab-size-code, 2);
+}
