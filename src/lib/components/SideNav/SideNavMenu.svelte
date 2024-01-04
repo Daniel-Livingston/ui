@@ -12,7 +12,7 @@
 <li {id} class={classNames('side-nav__item', classname)} {...props}>
 	<button class="side-nav__menu-button" bind:this={controller} on:click={() => (open = !open)}>
 		<span>{label}</span>
-		<ChevronIcon />
+		<ChevronIcon direction={open ? 'up' : 'down'} />
 	</button>
 	<ul id="{id}-menu" class="side-nav__menu" use:collapse={{ collapsed: !open, controller }}>
 		<slot />
