@@ -55,6 +55,10 @@
 		padding-bottom: 3rem;
 	}
 
+	.description {
+		padding-top: 3rem;
+	}
+
 	@media (min-width: 768px) {
 		.grid {
 			display: grid;
