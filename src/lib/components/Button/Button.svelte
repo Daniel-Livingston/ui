@@ -7,6 +7,8 @@
 	let {
 		'aria-label': ariaLabel,
 		close = false,
+		rounded = false,
+		size,
 		type = 'button',
 		variant,
 		class: classname,
@@ -15,8 +17,14 @@
 </script>
 
 <button
-	class={classNames('button', { [`button-${variant}`]: !!variant }, classname)}
+	class={classNames(
+		'button',
+		{ [`button-${variant}`]: !!variant },
+		{ [`button-${size}`]: !!size },
+		classname
+	)}
 	class:close
+	class:rounded
 	{type}
 	aria-label={ariaLabel ? ariaLabel : close ? 'Close' : undefined}
 	{...props}
