@@ -21,7 +21,11 @@
 {/if}
 
 <style>
+	:global(:root) {
+		--code-tab-size: 2;
+	}
+
 	pre.code {
-		tab-size: var(--tab-size-code, 2);
+		tab-size: var(--code-tab-size);
 	}
 </style>

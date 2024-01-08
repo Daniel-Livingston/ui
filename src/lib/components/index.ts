@@ -7,7 +7,6 @@ export { Card } from './Card';
 export { Code, Code as CodeSnippet } from './Code';
 export { Carousel } from './Carousel';
 export { DataTable } from './DataTable';
-export { Demo } from './Demo';
 export { Dropdown } from './Dropdown';
 export { Heading } from './Heading';
 export {

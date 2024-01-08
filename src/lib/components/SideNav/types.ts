@@ -10,4 +10,7 @@ export interface SideNavMenuProps extends HTMLAttributes<HTMLUListElement> {
 
 export interface SideNavLinkProps extends HTMLAnchorAttributes {
 	href: string;
+	active?: boolean;
 }
+
+export interface SideNavSeparatorProps extends HTMLAttributes<HTMLHRElement> {}

@@ -4,72 +4,133 @@
 	import type { HeadingProps } from './types';
 
 	let { level = 1, class: classname, ...props } = $props<HeadingProps>();
+
+	let element = $derived(`h${level}`) as 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
 </script>
 
-<svelte:element this={`h${level}`} class={classNames('heading', classname)} {...props}
+<svelte:element this={element} class={classNames('heading', element, classname)} {...props}
 	><slot /></svelte:element
 >
 
 <style>
+	:global(:root) {
+		--heading-color: var(--color-dark);
+		--heading-font-family: var(--sans-serif);
+		--heading-font-size: var(--font-size-lg);
+		--heading-font-weight: 700;
+		--heading-line-height: var(--body-line-height);
+		--heading-spacing-top: 0;
+		--heading-spacing-bottom: 0;
+
+		--h1-color: var(--heading-color);
+		--h1-font-family: var(--heading-font-family);
+		--h1-font-size: 2.5rem;
+		--h1-font-weight: var(--heading-font-weight);
+		--h1-line-height: var(--heading-line-height);
+		--h1-spacing-top: var(--heading-spacing-top);
+		--h1-spacing-bottom: var(--heading-spacing-bottom);
+
+		--h2-color: var(--heading-color);
+		--h2-font-family: var(--heading-font-family);
+		--h2-font-size: 2rem;
+		--h2-font-weight: var(--heading-font-weight);
+		--h2-line-height: var(--heading-line-height);
+		--h2-spacing-top: var(--heading-spacing-top);
+		--h2-spacing-bottom: var(--heading-spacing-bottom);
+
+		--h3-color: var(--heading-color);
+		--h3-font-family: var(--heading-font-family);
+		--h3-font-size: 1.75rem;
+		--h3-font-weight: var(--heading-font-weight);
+		--h3-line-height: var(--heading-line-height);
+		--h3-spacing-top: var(--heading-spacing-top);
+		--h3-spacing-bottom: var(--heading-spacing-bottom);
+
+		--h4-color: var(--heading-color);
+		--h4-font-family: var(--heading-font-family);
+		--h4-font-size: 1.5rem;
+		--h4-font-weight: var(--heading-font-weight);
+		--h4-line-height: var(--heading-line-height);
+		--h4-spacing-top: var(--heading-spacing-top);
+		--h4-spacing-bottom: var(--heading-spacing-bottom);
+
+		--h5-color: var(--heading-color);
+		--h5-font-family: var(--heading-font-family);
+		--h5-font-size: 1.25rem;
+		--h5-font-weight: var(--heading-font-weight);
+		--h5-line-height: var(--heading-line-height);
+		--h5-spacing-top: var(--heading-spacing-top);
+		--h5-spacing-bottom: var(--heading-spacing-bottom);
+
+		--h6-color: var(--heading-color);
+		--h6-font-family: var(--heading-font-family);
+		--h6-font-size: 1rem;
+		--h6-font-weight: var(--heading-font-weight);
+		--h6-line-height: var(--heading-line-height);
+		--h6-spacing-top: var(--heading-spacing-top);
+		--h6-spacing-bottom: var(--heading-spacing-bottom);
+	}
+
 	.heading {
-		font: var(--_font-weight) var(--_font-size) / var(--_line-height) var(--_font-family);
-		color: var(--_color);
-		padding-block-start: var(--_padding-block-start);
-		padding-block-end: var(--_padding-block-end, 0);
+		color: var(--heading-color);
+		font-family: var(--heading-font-family);
+		font-size: var(--heading-font-size);
+		font-weight: var(--heading-font-weight);
+		line-height: var(--heading-line-height);
+		padding: var(--heading-spacing-top) 0 var(--heading-spacing-bottom);
 	}
 
-	h1.heading {
-		--_font-family: var(--_font-family-h1);
-		--_font-size: var(--_font-size-h1);
-		--_font-weight: var(--_font-weight-h1);
-		--_line-height: var(--_line-height-h1);
-		--_color: var(--_color-h1);
-		--_padding-block-start: var(--padding-block-start-h1, 5rem);
-		--_padding-block-end: var(--padding-block-end-h1, 2rem);
+	.h1 {
+		color: var(--h1-color);
+		font-family: var(--h1-font-family);
+		font-size: var(--h1-font-size);
+		font-weight: var(--h1-font-weight);
+		line-height: var(--h1-line-height);
+		padding: var(--h1-spacing-top) 0 var(--h1-spacing-bottom);
 	}
 
-	h2.heading {
-		--_font-family: var(--_font-family-h2);
-		--_font-size: var(--_font-size-h2);
-		--_font-weight: var(--_font-weight-h2);
-		--_line-height: var(--_line-height-h2);
-		--_color: var(--_color-h2);
-		--_padding-block-start: var(--padding-block-start-h2, 2rem);
+	.h2 {
+		color: var(--h2-color);
+		font-family: var(--h2-font-family);
+		font-size: var(--h2-font-size);
+		font-weight: var(--h2-font-weight);
+		line-height: var(--h2-line-height);
+		padding: var(--h2-spacing-top) 0 var(--h2-spacing-bottom);
 	}
 
-	h3.heading {
-		--_font-family: var(--_font-family-h3);
-		--_font-size: var(--_font-size-h3);
-		--_font-weight: var(--_font-weight-h3);
-		--_line-height: var(--_line-height-h3);
-		--_color: var(--_color-h3);
-		--_padding-block-start: var(--padding-block-start-h3, 2rem);
+	.h3 {
+		color: var(--h3-color);
+		font-family: var(--h3-font-family);
+		font-size: var(--h3-font-size);
+		font-weight: var(--h3-font-weight);
+		line-height: var(--h3-line-height);
+		padding: var(--h3-spacing-top) 0 var(--h3-spacing-bottom);
 	}
 
-	h4.heading {
-		--_font-family: var(--_font-family-h4);
-		--_font-size: var(--_font-size-h4);
-		--_font-weight: var(--_font-weight-h4);
-		--_line-height: var(--_line-height-h4);
-		--_color: var(--_color-h4);
-		--_padding-block-start: var(--padding-block-start-h4, 2rem);
+	.h4 {
+		color: var(--h4-color);
+		font-family: var(--h4-font-family);
+		font-size: var(--h4-font-size);
+		font-weight: var(--h4-font-weight);
+		line-height: var(--h4-line-height);
+		padding: var(--h4-spacing-top) 0 var(--h4-spacing-bottom);
 	}
 
-	h5.heading {
-		--_font-family: var(--_font-family-h5);
-		--_font-size: var(--_font-size-h5);
-		--_font-weight: var(--_font-weight-h5);
-		--_line-height: var(--_line-height-h5);
-		--_color: var(--_color-h5);
-		--_padding-block-start: var(--padding-block-start-h5, 2rem);
+	.h5 {
+		color: var(--h5-color);
+		font-family: var(--h5-font-family);
+		font-size: var(--h5-font-size);
+		font-weight: var(--h5-font-weight);
+		line-height: var(--h5-line-height);
+		padding: var(--h5-spacing-top) 0 var(--h5-spacing-bottom);
 	}
 
-	h6.heading {
-		--_font-family: var(--_font-family-h6);
-		--_font-size: var(--_font-size-h6);
-		--_font-weight: var(--_font-weight-h6);
-		--_line-height: var(--_line-height-h6);
-		--_color: var(--_color-h6);
-		--_padding-block-start: var(--padding-block-start-h6, 2rem);
+	.h6 {
+		color: var(--h6-color);
+		font-family: var(--h6-font-family);
+		font-size: var(--h6-font-size);
+		font-weight: var(--h6-font-weight);
+		line-height: var(--h6-line-height);
+		padding: var(--h6-spacing-top) 0 var(--h6-spacing-bottom);
 	}
 </style>

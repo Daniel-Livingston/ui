@@ -4,8 +4,8 @@
 
 <style>
 	.side-nav__item {
-		background-color: var(--side-nav-item-background-color, var(--_color-white));
-		color: var(--side-nav-item-text-color, var(--_color-dark));
-		font-size: var(--side-nav-item-font-size, var(--_font-size-base));
+		background-color: var(--side-nav-item-bg);
+		color: var(--side-nav-item-color);
+		font-size: var(--side-nav-item-font-size);
 	}
 </style>

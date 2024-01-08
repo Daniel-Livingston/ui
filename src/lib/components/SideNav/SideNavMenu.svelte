@@ -29,11 +29,11 @@
 <style>
 	.side-nav__menu-button {
 		align-items: center;
-		background: none;
+		background-color: var(--side-nav-menu-button-bg);
 		border: none;
 		cursor: pointer;
 		display: flex;
-		font-weight: var(--side-nav-menu-button-font-weight, 600);
+		font-weight: var(--side-nav-menu-button-font-weight);
 		justify-content: space-between;
 		width: 100%;
 	}
@@ -49,6 +49,6 @@
 	}
 
 	.side-nav__menu-button:hover {
-		background-color: var(--side-nav-item-hover-background-color, var(--_color-light));
+		background-color: var(--side-nav-menu-button-bg-hover);
 	}
 </style>

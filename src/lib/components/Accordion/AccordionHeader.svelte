@@ -29,23 +29,21 @@
 	}
 
 	.accordion__header.open {
-		background-color: var(--background-color-accordion-button-open, var(--_color-light));
-		border-bottom: var(--border-width-accordion-button, 1px) solid
-			var(--border-color-accordion-button, rgba(var(--_color-dark-rgb), 0.2));
-		color: var(--color-accordion-button-open, var(--_color-primary));
+		background-color: var(--accordion-button-bg-open);
+		border-bottom: var(--accordion-button-border-width) solid var(--accordion-button-border-color);
+		color: var(--accordion-button-color-open);
 	}
 
 	.accordion__button {
 		align-items: center;
-		background-color: var(--background-color-accordion-button, transparent);
+		background-color: var(--accordion-button-bg, transparent);
 		border: none;
 		color: inherit;
 		display: flex;
-		font: var(--font-weight-accordion-header, 500) var(--font-size-accordion-header, 1rem) /
-			var(--line-height-accordion-header, 1.5)
-			var(--font-family-accordion-header, var(--_font-family-sans-serif));
+		font: var(--accordion-header-font-weight) var(--accordion-header-font-size) /
+			var(--accordion-header-line-height) var(--accordion-header-font-family);
 		justify-content: space-between;
-		padding: var(--padding-accordion-header, 0.75rem);
+		padding: var(--accordion-header-padding);
 		text-align: start;
 		width: 100%;
 	}
@@ -55,8 +53,8 @@
 	}
 
 	.accordion__button:focus {
-		outline: var(--outline-width-accordion-button, 2px) solid
-			var(--outline-color-accordion-button, var(--_color-primary));
-		outline-offset: var(--outline-offset-accordion-button, 2px);
+		outline: var(--accordion-button-focus-outline-width) solid
+			var(--accordion-button-focus-outline-color);
+		outline-offset: var(--accordion-button-focus-ouline-offset);
 	}
 </style>

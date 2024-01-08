@@ -20,13 +20,12 @@
 
 <style>
 	.accordion__item {
-		border: var(--border-width-accordion-button, 1px) solid
-			var(--border-color-accordion-button, rgba(var(--_color-dark-rgb), 0.2));
+		border: var(--accordion-item-border-width) solid var(--accordion-item-border-color);
 		border-left: none;
 		border-right: none;
 	}
 
-	.accordion__item + .accordion__item {
+	:global(.accordion__item) + .accordion__item {
 		border-top: none;
 	}
 </style>

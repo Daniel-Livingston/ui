@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { Demo, CodeSnippet, Heading, Text } from '$lib';
-	import { fixCodeSnippet } from '$lib/internal/code';
+	import { CodeSnippet, Heading, Text } from '$lib';
+	import { Demo, fixCodeSnippet, getCssVariables } from '$lib/internal';
 
 	import SupportedVariantsExample from './examples/SupportedVariants.svelte';
 	import supportedVariantsExampleCode from './examples/SupportedVariants.svelte?raw';
@@ -13,6 +13,9 @@
 
 	import DisabledExample from './examples/Disabled.svelte';
 	import disabledExampleCode from './examples/Disabled.svelte?raw';
+
+	import buttonCode from '$lib/components/Button/Button.svelte?raw';
+	const buttonCssVariables = getCssVariables(buttonCode, { svelte: true });
 </script>
 
 <Heading level={2}>Overview</Heading>

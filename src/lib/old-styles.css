@@ -1,0 +1,181 @@
+/* A basic reset. */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+* {
+	margin: 0;
+}
+
+body {
+	line-height: 1.5;
+	-webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+	display: block;
+	max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	overflow-wrap: break-word;
+}
+
+/* Define the base variables for the UI library. */
+
+/* Colors and theming. */
+:root {
+	--_color-primary-rgb: var(--color-primary-rgb, 0, 123, 255);
+	--_color-secondary-rgb: var(--color-secondary-rgb, 108, 117, 125);
+	--_color-success-rgb: var(--color-success-rgb, 40, 167, 69);
+	--_color-info-rgb: var(--color-info-rgb, 23, 162, 184);
+	--_color-warning-rgb: var(--color-warning-rgb, 255, 193, 7);
+	--_color-danger-rgb: var(--color-danger-rgb, 220, 53, 69);
+	--_color-light-rgb: var(--color-light-rgb, 248, 249, 250);
+	--_color-dark-rgb: var(--color-dark-rgb, 52, 58, 64);
+	--_color-white-rgb: var(--color-white-rgb, 255, 255, 255);
+	--_color-black-rgb: var(--color-black-rgb, 0, 0, 0);
+
+	--_color-primary: var(--color-primary, rgb(var(--_color-primary-rgb)));
+	--_color-secondary: var(--color-secondary, rgb(var(--_color-secondary-rgb)));
+	--_color-success: var(--color-success, rgb(var(--_color-success-rgb)));
+	--_color-info: var(--color-info, rgb(var(--_color-info-rgb)));
+	--_color-warning: var(--color-warning, rgb(var(--_color-warning-rgb)));
+	--_color-danger: var(--color-danger, rgb(var(--_color-danger-rgb)));
+	--_color-light: var(--color-light, rgb(var(--_color-light-rgb)));
+	--_color-dark: var(--color-dark, rgb(var(--_color-dark-rgb)));
+	--_color-white: var(--color-white, rgb(var(--_color-white-rgb)));
+	--_color-black: var(--color-black, rgb(var(--_color-black-rgb)));
+}
+
+/* Typography. */
+:root {
+	--_font-family-sans-serif: var(
+		--font-family-sans-serif,
+		system-ui,
+		-apple-system,
+		BlinkMacSystemFont,
+		'Segoe UI',
+		'Roboto',
+		'Oxygen',
+		'Ubuntu',
+		'Cantarell',
+		'Fira Sans',
+		'Droid Sans',
+		'Helvetica Neue',
+		Arial,
+		sans-serif
+	);
+
+	--_font-family-monospace: var(
+		--font-family-monospace,
+		ui-monospace,
+		Menlo,
+		Monaco,
+		'Cascadia Mono',
+		'Segoe UI Mono',
+		'Roboto Mono',
+		'Oxygen Mono',
+		'Ubuntu Monospace',
+		'Source Code Pro',
+		'Fira Mono',
+		'Droid Sans Mono',
+		'Courier New',
+		monospace
+	);
+
+	--_font-family-h1: var(--font-family-h1, var(--_font-family-sans-serif));
+	--_font-family-h2: var(--font-family-h2, var(--_font-family-sans-serif));
+	--_font-family-h3: var(--font-family-h3, var(--_font-family-sans-serif));
+	--_font-family-h4: var(--font-family-h4, var(--_font-family-sans-serif));
+	--_font-family-h5: var(--font-family-h5, var(--_font-family-sans-serif));
+	--_font-family-h6: var(--font-family-h6, var(--_font-family-sans-serif));
+
+	--_font-size-h1: var(--font-size-h1, 2.5rem);
+	--_font-size-h2: var(--font-size-h2, 2rem);
+	--_font-size-h3: var(--font-size-h3, 1.75rem);
+	--_font-size-h4: var(--font-size-h4, 1.5rem);
+	--_font-size-h5: var(--font-size-h5, 1.25rem);
+	--_font-size-h6: var(--font-size-h6, 1rem);
+
+	--_font-weight-h1: var(--font-weight-h1, 700);
+	--_font-weight-h2: var(--font-weight-h2, 700);
+	--_font-weight-h3: var(--font-weight-h3, 700);
+	--_font-weight-h4: var(--font-weight-h4, 700);
+	--_font-weight-h5: var(--font-weight-h5, 700);
+	--_font-weight-h6: var(--font-weight-h6, 700);
+
+	--_line-height-h1: var(--line-height-h1, 1.5);
+	--_line-height-h2: var(--line-height-h2, 1.5);
+	--_line-height-h3: var(--line-height-h3, 1.5);
+	--_line-height-h4: var(--line-height-h4, 1.5);
+	--_line-height-h5: var(--line-height-h5, 1.5);
+	--_line-height-h6: var(--line-height-h6, 1.5);
+
+	--_color-h1: var(--color-h1, var(--_color-black));
+	--_color-h2: var(--color-h2, var(--_color-black));
+	--_color-h3: var(--color-h3, var(--_color-black));
+	--_color-h4: var(--color-h4, var(--_color-black));
+	--_color-h5: var(--color-h5, var(--_color-black));
+	--_color-h6: var(--color-h6, var(--_color-black));
+
+	--_font-size-xs: var(--font-size-xs, 0.75rem);
+	--_font-size-sm: var(--font-size-sm, 0.875rem);
+	--_font-size-base: var(--font-size-base, 1rem);
+	--_font-size-lg: var(--font-size-lg, 1.25rem);
+	--_font-size-xl: var(--font-size-xl, 1.5rem);
+}
+
+/* Base and utility styles. */
+body,
+.sans-serif {
+	font-family: var(--_font-family-sans-serif);
+}
+
+code,
+.monospace {
+	font-family: var(--_font-family-monospace);
+}
+
+main {
+	overflow: auto;
+}
+
+.collapsible {
+	height: auto;
+	overflow: auto;
+}
+
+.collapsible.collapsed {
+	height: 0;
+	overflow: hidden;
+}
+
+.readable > p,
+p.readable {
+	max-width: 35rem;
+}
+
+.readable > pre,
+pre.readable {
+	max-width: 45rem;
+}

@@ -1,5 +1,6 @@
 <script lang="ts">
-	import { CodeSnippet, Demo, Heading, Text } from '$lib';
+	import { CodeSnippet, Heading, Text } from '$lib';
+	import { Demo } from '$lib/internal';
 	import MultilineExample from './examples/Multiline.svelte';
 	import multilineExampleCode from './examples/Multiline.svelte?raw';
 	import InlineExample from './examples/Inline.svelte';
