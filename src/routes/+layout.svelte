@@ -1,9 +1,7 @@
 <script lang="ts">
 	import { page } from '$app/stores';
 
-	import '$lib/styles/reset.css';
-	import '$lib/styles/variables.css';
-	import '$lib/styles/base.css';
+	import '$lib/styles.css';
 	import 'highlight.js/styles/default.css';
 
 	import { Heading, SideNav, Text } from '$lib';
@@ -26,14 +24,14 @@
 			<SideNav.Link href="/components/code">Code</SideNav.Link>
 		</SideNav.Menu>
 	</SideNav>
-	<main class="main readable">
+	<main class="main">
 		<div class="header">
 			<Heading level={1}>{$page.data.title}</Heading>
 		</div>
 
-		<div class="content">
+		<div class="content readable">
 			<div class="description">
-				<Text size="xl">{$page.data.description}</Text>
+				<Text class="readable" size="xl">{$page.data.description}</Text>
 			</div>
 
 			<slot />

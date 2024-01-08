@@ -1,10 +1,10 @@
 <script lang="ts">
-	import './Icon.css';
-	import type { ChevronIconProps } from './types';
 	import classNames from 'classnames';
 
+	import Icon from './Icon.svelte';
+	import type { ChevronIconProps } from './types';
+
 	let {
-		size = 24,
 		color = 'currentColor',
 		direction = 'left',
 		class: classname,
@@ -12,11 +12,25 @@
 	} = $props<ChevronIconProps>();
 </script>
 
-<svg
-	class={classNames('icon', 'icon-chevron', direction, classname)}
-	xmlns="http://www.w3.org/2000/svg"
-	width={size}
-	height={size}
-	viewBox="0 0 24 24"
-	{...props}><path fill={color} d="m14 18l-6-6l6-6l1.4 1.4l-4.6 4.6l4.6 4.6z" /></svg
->
+<Icon class={classNames('icon', 'icon-chevron', direction)} {...props}>
+	<path fill={color} d="m14 18l-6-6l6-6l1.4 1.4l-4.6 4.6l4.6 4.6z" />
+</Icon>
+
+<style>
+	:global(.icon-chevron) {
+		transform: rotate(0deg);
+		transition: transform 0.1s ease-in-out;
+	}
+
+	:global(.icon-chevron.right) {
+		transform: rotate(180deg);
+	}
+
+	:global(.icon-chevron.up) {
+		transform: rotate(270deg);
+	}
+
+	:global(.icon-chevron.down) {
+		transform: rotate(90deg);
+	}
+</style>

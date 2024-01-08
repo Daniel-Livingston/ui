@@ -1,8 +1,0 @@
-.readable pre.code,
-pre.readable.code {
-	max-width: 45rem;
-}
-
-pre.code {
-	tab-size: var(--tab-size-code, 2);
-}

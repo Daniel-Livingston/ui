@@ -1,10 +1,11 @@
 <script lang="ts">
-	import type { AccordionItemProps } from './types';
 	import AccordionBody from './AccordionBody.svelte';
 	import AccordionHeader from './AccordionHeader.svelte';
+	import type { AccordionItemProps } from './types';
 
 	let { id, label, open = false, class: classname, ...props } = $props<AccordionItemProps>();
 
+	// todo: fix this somehow
 	let controller: HTMLButtonElement;
 </script>
 
@@ -16,3 +17,16 @@
 		<slot />
 	</AccordionBody>
 </div>
+
+<style>
+	.accordion__item {
+		border: var(--border-width-accordion-button, 1px) solid
+			var(--border-color-accordion-button, rgba(var(--_color-dark-rgb), 0.2));
+		border-left: none;
+		border-right: none;
+	}
+
+	.accordion__item + .accordion__item {
+		border-top: none;
+	}
+</style>

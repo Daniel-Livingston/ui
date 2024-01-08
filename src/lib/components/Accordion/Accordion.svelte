@@ -1,8 +1,8 @@
 <script lang="ts">
-	import './Accordion.css';
-	import type { AccordionProps } from './types';
 	import { setContext } from 'svelte';
 	import classNames from 'classnames';
+
+	import type { AccordionProps } from './types';
 
 	let { headingLevel = 2, class: classname, ...props } = $props<AccordionProps>();
 

@@ -1,7 +1,7 @@
 <script lang="ts">
-	import './DataTable.css';
-	import type { DataTableProps } from './types';
 	import classNames from 'classnames';
+
+	import type { DataTableProps } from './types';
 
 	let { columns, rows, class: classname, ...props } = $props<DataTableProps>();
 </script>

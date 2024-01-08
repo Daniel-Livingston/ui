@@ -1,5 +1,4 @@
 <script lang="ts">
-	import './Code.css';
 	import type { CodeProps } from './types';
 
 	let { code, lang, highlighted = false, inline = false } = $props<CodeProps>();
@@ -20,3 +19,9 @@
 		{@render codeMarkdown(highlight(code, lang))}
 	{/await}
 {/if}
+
+<style>
+	pre.code {
+		tab-size: var(--tab-size-code, 2);
+	}
+</style>

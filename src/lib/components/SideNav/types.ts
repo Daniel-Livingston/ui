@@ -2,7 +2,7 @@ import type { HTMLAttributes, HTMLAnchorAttributes, HTMLMenuAttributes } from 's
 
 export interface SideNavProps extends HTMLMenuAttributes {}
 
-export interface SideNavMenuProps extends HTMLAttributes<HTMLLIElement> {
+export interface SideNavMenuProps extends HTMLAttributes<HTMLUListElement> {
 	id: string;
 	label: string;
 	open?: boolean;

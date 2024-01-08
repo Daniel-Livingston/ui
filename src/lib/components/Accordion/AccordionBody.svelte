@@ -1,6 +1,6 @@
 <script lang="ts">
-	import type { AccordionBodyProps } from './types';
 	import { collapse } from '$lib/actions';
+	import type { AccordionBodyProps } from './types';
 
 	let { controller, open, ...props } = $props<AccordionBodyProps>();
 </script>
@@ -13,7 +13,13 @@
 		controller
 	}}
 >
-	<div>
+	<div class="accordion__content">
 		<slot />
 	</div>
 </div>
+
+<style>
+	.accordion__content {
+		padding: var(--padding-accordion-body, 1rem 0.75rem);
+	}
+</style>

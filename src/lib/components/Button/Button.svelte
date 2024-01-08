@@ -1,8 +1,8 @@
 <script lang="ts">
-	import './Button.css';
-	import type { ButtonProps } from './types';
 	import classNames from 'classnames';
+
 	import { CloseIcon } from '$lib/icons';
+	import type { ButtonProps } from './types';
 
 	let {
 		'aria-label': ariaLabel,
@@ -35,3 +35,113 @@
 		<slot />
 	{/if}
 </button>
+
+<style>
+	.button {
+		background-color: var(--_background-color-button, transparent);
+		border: var(--border-width-button, 1px) solid var(--_border-color-button, transparent);
+		color: var(--_text-color-button, var(--color-black));
+		font-size: var(--_font-size-button, var(--font-size-base));
+		padding: var(--_padding-button, 0.5rem 1rem);
+		transition: box-shadow 0.2s ease-in-out;
+	}
+
+	.button:focus {
+		outline: 2px solid var(--_border-color-button, transparent);
+		outline-offset: 2px;
+	}
+
+	.button:focus,
+	.button:not(:disabled):hover {
+		box-shadow: var(--_box-shadow-button, 0 0 8px 2px rgba(0, 0, 0, 0.25));
+	}
+
+	.button-primary {
+		--_background-color-button: var(--_color-primary);
+		--_border-color-button: var(--_color-primary);
+		--_text-color-button: var(--_color-white);
+	}
+
+	.button-secondary {
+		--_background-color-button: var(--_color-secondary);
+		--_border-color-button: var(--_color-secondary);
+		--_text-color-button: var(--_color-white);
+	}
+
+	.button-success {
+		--_background-color-button: var(--_color-success);
+		--_border-color-button: var(--_color-success);
+		--_text-color-button: var(--_color-white);
+	}
+
+	.button-danger {
+		--_background-color-button: var(--_color-danger);
+		--_border-color-button: var(--_color-danger);
+		--_text-color-button: var(--_color-white);
+	}
+
+	.button-warning {
+		--_background-color-button: var(--_color-warning);
+		--_border-color-button: var(--_color-warning);
+		--_text-color-button: var(--_color-black);
+	}
+
+	.button-info {
+		--_background-color-button: var(--_color-info);
+		--_border-color-button: var(--_color-info);
+		--_text-color-button: var(--_color-black);
+	}
+
+	.button-light {
+		--_background-color-button: var(--_color-light);
+		--_border-color-button: var(--_color-light);
+		--_text-color-button: var(--_color-black);
+	}
+
+	.button-dark {
+		--_background-color-button: var(--_color-dark);
+		--_border-color-button: var(--_color-dark);
+		--_text-color-button: var(--_color-white);
+	}
+
+	.button-xs {
+		--_box-shadow-button: 0 0 5px 1px rgba(0, 0, 0, 0.25);
+		--_font-size-button: var(--_font-size-xs);
+		--_padding-button: 0.25rem 0.5rem;
+	}
+
+	.button-sm {
+		--_box-shadow-button: 0 0 6px 2px rgba(0, 0, 0, 0.25);
+		--_font-size-button: var(--_font-size-sm);
+		--_padding-button: 0.5rem 1rem;
+	}
+
+	.button-lg {
+		--_box-shadow-button: 0 0 15px 5px rgba(0, 0, 0, 0.1), 0 0 12px 3px rgba(0, 0, 0, 0.25);
+		--_font-size-button: var(--_font-size-lg);
+		--_padding-button: 1rem 2rem;
+	}
+
+	.button-xl {
+		--_box-shadow-button: 0 0 18px 6px rgba(0, 0, 0, 0.1), 0 0 15px 4px rgba(0, 0, 0, 0.25);
+		--_font-size-button: var(--_font-size-xl);
+		--_padding-button: 1.5rem 3rem;
+	}
+
+	.button.rounded {
+		border-radius: var(--border-radius-button, 0.25rem);
+	}
+
+	.button:not(:disabled) {
+		cursor: pointer;
+	}
+
+	.button:disabled {
+		opacity: 0.5;
+		cursor: not-allowed;
+	}
+
+	.button.close {
+		padding: 0.25rem;
+	}
+</style>

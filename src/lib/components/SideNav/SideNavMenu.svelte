@@ -1,20 +1,54 @@
 <script lang="ts">
-	import type { SideNavMenuProps } from './types';
 	import classNames from 'classnames';
+
 	import { ChevronIcon } from '$lib/icons';
 	import { collapse } from '$lib/actions';
+	import SideNavItem from './SideNavItem.svelte';
+	import type { SideNavMenuProps } from './types';
 
-	let { id, label, open = false, class: classname, ...props } = $props<SideNavMenuProps>();
+	let { label, open = false, class: classname, ...props } = $props<SideNavMenuProps>();
 
 	let controller: HTMLButtonElement;
 </script>
 
-<li {id} class={classNames('side-nav__item', classname)} {...props}>
+<SideNavItem>
 	<button class="side-nav__menu-button" bind:this={controller} on:click={() => (open = !open)}>
 		<span>{label}</span>
 		<ChevronIcon direction={open ? 'up' : 'down'} />
 	</button>
-	<ul id="{id}-menu" class="side-nav__menu" use:collapse={{ collapsed: !open, controller }}>
+
+	<ul
+		class={classNames('side-nav__menu', classname)}
+		use:collapse={{ collapsed: !open, controller }}
+		{...props}
+	>
 		<slot />
 	</ul>
-</li>
+</SideNavItem>
+
+<style>
+	.side-nav__menu-button {
+		align-items: center;
+		background: none;
+		border: none;
+		cursor: pointer;
+		display: flex;
+		font-weight: var(--side-nav-menu-button-font-weight, 600);
+		justify-content: space-between;
+		width: 100%;
+	}
+
+	.side-nav__menu-button {
+		padding: 0.25rem 0.5rem;
+	}
+
+	.side-nav__menu {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	.side-nav__menu-button:hover {
+		background-color: var(--side-nav-item-hover-background-color, var(--_color-light));
+	}
+</style>
