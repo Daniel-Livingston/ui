@@ -13,9 +13,6 @@
 
 	import DisabledExample from './examples/Disabled.svelte';
 	import disabledExampleCode from './examples/Disabled.svelte?raw';
-
-	import buttonCode from '$lib/components/Button/Button.svelte?raw';
-	const buttonCssVariables = getCssVariables(buttonCode, { svelte: true });
 </script>
 
 <Heading level={2}>Overview</Heading>

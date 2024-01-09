@@ -24,6 +24,7 @@ const navItems = [
 			items: [
 				{ id: 'accordion', label: 'Accordion', href: '/components/accordion' },
 				{ id: 'alert', label: 'Alert', href: '/components/alert' },
+				{ id: 'badge', label: 'Badge', href: '/components/badge' },
 				{ id: 'button', label: 'Button', href: '/components/button' },
 				{ id: 'code', label: 'Code', href: '/components/code' },
 				{ id: 'heading', label: 'Heading', href: '/components/heading' }
