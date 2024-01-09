@@ -7,8 +7,6 @@
 	import { Heading, SideNav, Text } from '$lib';
 	import navItems from './navItems';
 
-	$inspect($page);
-
 	let { title, description } = $derived($page.data);
 	let { pathname } = $derived($page.url);
 </script>
