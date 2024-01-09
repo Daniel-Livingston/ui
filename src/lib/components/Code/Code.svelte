@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { highlight } from './highlight';
 	import type { CodeProps } from './types';
 
 	let { code, lang, highlighted = false, inline = false } = $props<CodeProps>();
@@ -10,14 +11,10 @@
 
 {#if inline}
 	<code class="code">{code}</code>
-{:else if !highlighted}
-	{@render codeMarkdown(code)}
+{:else if highlighted}
+	{@render codeMarkdown(highlight(code, lang))}
 {:else}
-	{#await import('./highlight')}
-		{@render codeMarkdown(code)}
-	{:then { highlight }}
-		{@render codeMarkdown(highlight(code, lang))}
-	{/await}
+	{@render codeMarkdown(code)}
 {/if}
 
 <style>
