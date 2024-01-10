@@ -80,7 +80,7 @@ export interface FileUploaderProps extends Omit<HTMLInputAttributes, 'type'>, Ba
 export interface NumberInputProps extends Omit<HTMLInputAttributes, 'type'>, BaseFieldProps {
 	id: string;
 	required?: boolean;
-	value: number;
+	value: number | undefined;
 }
 
 export interface RadioProps extends Omit<HTMLInputAttributes, 'type'>, BaseFieldProps {

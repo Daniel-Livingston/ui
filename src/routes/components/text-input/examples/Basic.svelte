@@ -2,8 +2,6 @@
 	import { Form } from '$lib';
 
 	let name = $state('');
-
-	$inspect(name);
 </script>
 
 <Form method="POST">
