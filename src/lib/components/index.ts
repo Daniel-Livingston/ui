@@ -12,13 +12,15 @@ export { Heading } from './Heading';
 export {
 	Checkbox,
 	DatePicker,
+	DateTimePicker,
+	EmailInput,
 	FileUploader,
 	Form,
-	Input,
 	NumberInput,
+	Option,
 	Radio,
+	Range,
 	Select,
-	Slider,
 	TextArea,
 	TextInput,
 	Toggle

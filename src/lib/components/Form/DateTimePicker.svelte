@@ -1,6 +1,6 @@
 <script lang="ts">
 	import Field from './Field.svelte';
-	import type { NumberInputProps } from './types';
+	import type { DatePickerProps } from './types';
 
 	let {
 		class: classname,
@@ -11,9 +11,9 @@
 		required,
 		value,
 		...props
-	} = $props<NumberInputProps>();
+	} = $props<DatePickerProps>();
 </script>
 
 <Field class={classname} {description} {error} {id} {label} {required}>
-	<input type="number" class="form__input" bind:value {id} {...props} />
+	<input type="datetime-local" class="form__input" bind:value {id} {...props} />
 </Field>

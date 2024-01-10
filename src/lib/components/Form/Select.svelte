@@ -1,14 +1,27 @@
 <script lang="ts">
-	interface $$Events {}
+	import Field from './Field.svelte';
+	import type { SelectProps } from './types';
 
-	interface $$Props {}
-
-	interface $$Slots {
-		default: {};
-	}
+	let {
+		class: classname,
+		description,
+		error,
+		id,
+		label,
+		required,
+		value,
+		...props
+	} = $props<SelectProps>();
 </script>
 
-<slot />
+<Field class={classname} {description} {error} {id} {label} {required}>
+	<select class="form__input form__select" {id} bind:value {...props}>
+		<slot />
+	</select>
+</Field>
 
 <style>
+	.form__select {
+		padding: var(--form-input-padding-y) calc(var(--form-input-padding-x) - 0.25rem);
+	}
 </style>

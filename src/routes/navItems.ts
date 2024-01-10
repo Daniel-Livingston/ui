@@ -27,7 +27,9 @@ const navItems = [
 				{ id: 'badge', label: 'Badge', href: '/components/badge' },
 				{ id: 'button', label: 'Button', href: '/components/button' },
 				{ id: 'code', label: 'Code', href: '/components/code' },
-				{ id: 'heading', label: 'Heading', href: '/components/heading' }
+				{ id: 'form', label: 'Form', href: '/components/form' },
+				{ id: 'heading', label: 'Heading', href: '/components/heading' },
+				{ id: 'text-input', label: 'Text Input', href: '/components/text-input' }
 			]
 		}
 	]

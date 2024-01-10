@@ -1,14 +1,19 @@
 <script lang="ts">
-	interface $$Events {}
+	import Field from './Field.svelte';
+	import type { TextInputProps } from './types';
 
-	interface $$Props {}
-
-	interface $$Slots {
-		default: {};
-	}
+	let {
+		class: classname,
+		description,
+		error,
+		id,
+		label,
+		required,
+		value,
+		...props
+	} = $props<TextInputProps>();
 </script>
 
-<slot />
-
-<style>
-</style>
+<Field class={classname} {description} {error} {id} {label} {required}>
+	<input type="text" class="form__input" bind:value {id} {...props} />
+</Field>

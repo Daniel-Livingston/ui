@@ -87,6 +87,10 @@
 		padding-block-start: 1.5rem;
 	}
 
+	.content > :global(.demo) + :global(.code) {
+		padding-block-start: 0;
+	}
+
 	.content > :global(*) + :global(.text) {
 		--text-spacing-top: 1.5rem;
 	}

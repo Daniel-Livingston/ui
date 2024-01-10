@@ -1,14 +1,19 @@
 <script lang="ts">
-	interface $$Events {}
+	import Field from './Field.svelte';
+	import type { DatePickerProps } from './types';
 
-	interface $$Props {}
-
-	interface $$Slots {
-		default: {};
-	}
+	let {
+		class: classname,
+		description,
+		error,
+		id,
+		label,
+		required,
+		value,
+		...props
+	} = $props<DatePickerProps>();
 </script>
 
-<slot />
-
-<style>
-</style>
+<Field class={classname} {description} {error} {id} {label} {required}>
+	<input type="date" class="form__input" bind:value {id} {...props} />
+</Field>

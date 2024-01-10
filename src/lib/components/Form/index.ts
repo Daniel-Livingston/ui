@@ -1,12 +1,47 @@
-export { default as Checkbox } from './Checkbox.svelte';
-export { default as DatePicker } from './DatePicker.svelte';
-export { default as FileUploader } from './FileUploader.svelte';
-export { default as Form } from './Form.svelte';
-export { default as Input } from './Input.svelte';
-export { default as NumberInput } from './NumberInput.svelte';
-export { default as Radio } from './Radio.svelte';
-export { default as Select } from './Select.svelte';
-export { default as Slider } from './Slider.svelte';
-export { default as TextArea } from './TextArea.svelte';
-export { default as TextInput } from './TextInput.svelte';
-export { default as Toggle } from './Toggle.svelte';
+import Form from './Form.svelte';
+import Checkbox from './Checkbox.svelte';
+import DatePicker from './DatePicker.svelte';
+import DateTimePicker from './DateTimePicker.svelte';
+import EmailInput from './EmailInput.svelte';
+import FileUploader from './FileUploader.svelte';
+import NumberInput from './NumberInput.svelte';
+import Option from './Option.svelte';
+import Radio from './Radio.svelte';
+import Select from './Select.svelte';
+import Range from './Range.svelte';
+import TextArea from './TextArea.svelte';
+import TextInput from './TextInput.svelte';
+import Toggle from './Toggle.svelte';
+
+const FormContainer = Object.assign(Form, {
+	Checkbox,
+	DatePicker,
+	DateTimePicker,
+	EmailInput,
+	FileUploader,
+	NumberInput,
+	Option,
+	Radio,
+	Range,
+	Select,
+	TextArea,
+	TextInput,
+	Toggle
+});
+
+export {
+	FormContainer as Form,
+	Checkbox,
+	DatePicker,
+	DateTimePicker,
+	EmailInput,
+	FileUploader,
+	NumberInput,
+	Option,
+	Radio,
+	Range,
+	Select,
+	TextArea,
+	TextInput,
+	Toggle
+};
