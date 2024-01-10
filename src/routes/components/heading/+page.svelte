@@ -6,7 +6,7 @@
 	import levelsCode from './examples/Levels.svelte?raw';
 </script>
 
-<Heading level={2}>Overview</Heading>
+<Heading id="overview" level={2}>Overview</Heading>
 
 <Text
 	>All HTML headings, <CodeSnippet code="<h1>" inline /> through <CodeSnippet code="<h6>" inline /> are

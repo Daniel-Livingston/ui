@@ -11,8 +11,6 @@
 	let date = $state('');
 	let datetime = $state('');
 	let files = $state<FileList | undefined>(undefined);
-
-	$inspect(files);
 </script>
 
 <Form method="POST" enctype="multipart/form-data">

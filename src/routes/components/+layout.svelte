@@ -9,9 +9,9 @@
 <slot />
 
 {#if cssVariableAPI}
-	<Heading level={2}>API</Heading>
+	<Heading id="api" level={2}>API</Heading>
 
-	<Heading level={3}>CSS Variables</Heading>
+	<Heading id="css-variables" level={3}>CSS Variables</Heading>
 
 	<CodeSnippet code={cssVariableAPI} lang="css" highlighted />
 {/if}

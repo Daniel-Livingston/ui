@@ -7,18 +7,18 @@
 	import inlineExampleCode from './examples/Inline.svelte?raw';
 </script>
 
-<Heading level={2}>Overview</Heading>
+<Heading id="overview" level={2}>Overview</Heading>
 
 <Text>
 	There are three different variants of code snippets: inline, multi-line, and multi-line
 	highlighted.
 </Text>
 
-<Heading level={3}>Variants</Heading>
+<Heading id="variants" level={3}>Variants</Heading>
 
 <Text>Todo: Insert table.</Text>
 
-<Heading level={2}>Usage</Heading>
+<Heading id="usage" level={2}>Usage</Heading>
 
 <Text>
 	The most common use for this component is to output a code snippet into documentation that the

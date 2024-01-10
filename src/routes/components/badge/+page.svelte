@@ -7,16 +7,16 @@
 	import supportedVariantsExampleCode from './examples/SupportedVariants.svelte?raw';
 </script>
 
-<Heading level={2}>Overview</Heading>
+<Heading id="overview" level={2}>Overview</Heading>
 
 <Text>
 	Badges can be used to provide a bit of extra information to the user. They can be used to show the
 	status of an item, or to show the number of items in a list, for example.
 </Text>
 
-<Heading level={2}>Usage</Heading>
+<Heading id="usage" level={2}>Usage</Heading>
 
-<Heading level={3}>Variants</Heading>
+<Heading id="variants" level={3}>Variants</Heading>
 
 <Demo>
 	<SupportedVariantsExample />

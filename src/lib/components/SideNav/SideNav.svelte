@@ -60,7 +60,6 @@
 		padding: 0;
 		position: -webkit-sticky;
 		position: sticky;
-		overflow-y: auto;
 		top: 0;
 	}
 </style>

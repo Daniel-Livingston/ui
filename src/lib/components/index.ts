@@ -34,6 +34,7 @@ export { Pagination } from './Pagination';
 export { Progress, ProgressBar, ProgressIndicator } from './Progress';
 export { Search } from './Search';
 export { SideNav } from './SideNav';
+export { TableOfContents } from './TableOfContents';
 export { Tabs } from './Tabs';
 export { Text } from './Text';
 export { Toast as Notification, Toast } from './Toast';

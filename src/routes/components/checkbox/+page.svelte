@@ -6,9 +6,9 @@
 	import basicCode from './examples/Basic.svelte?raw';
 </script>
 
-<Heading level={2}>Usage</Heading>
+<Heading id="usage" level={2}>Usage</Heading>
 
-<Heading level={3}>Basic</Heading>
+<Heading id="basic" level={3}>Basic</Heading>
 
 <Demo>
 	<Basic />

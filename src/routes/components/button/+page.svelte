@@ -15,16 +15,16 @@
 	import disabledExampleCode from './examples/Disabled.svelte?raw';
 </script>
 
-<Heading level={2}>Overview</Heading>
+<Heading id="overview" level={2}>Overview</Heading>
 
 <Text>
 	Buttons are used to provide the user with ways of interacting with the page. Buttons come in many
 	different styles and can be customized entirely.
 </Text>
 
-<Heading level={2}>Usage</Heading>
+<Heading id="usage" level={2}>Usage</Heading>
 
-<Heading level={3}>Variants</Heading>
+<Heading id="variants" level={3}>Variants</Heading>
 
 <Demo>
 	<SupportedVariantsExample />
@@ -32,7 +32,7 @@
 
 <CodeSnippet code={fixCodeSnippet(supportedVariantsExampleCode)} lang="html" highlighted />
 
-<Heading level={3}>Sizes</Heading>
+<Heading id="sizes" level={3}>Sizes</Heading>
 
 <Demo>
 	<SupportedSizes />
@@ -40,7 +40,7 @@
 
 <CodeSnippet code={fixCodeSnippet(supportedSizesCode)} lang="html" highlighted />
 
-<Heading level={3}>Rounded</Heading>
+<Heading id="rounded" level={3}>Rounded</Heading>
 
 <Demo>
 	<RoundedExample />
@@ -48,7 +48,7 @@
 
 <CodeSnippet code={fixCodeSnippet(roundedExampleCode)} lang="html" highlighted />
 
-<Heading level={3}>Disabled</Heading>
+<Heading id="disabled" level={3}>Disabled</Heading>
 
 <Demo>
 	<DisabledExample />

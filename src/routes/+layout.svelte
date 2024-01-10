@@ -4,11 +4,13 @@
 	import '$lib/styles.css';
 	import 'highlight.js/styles/default.css';
 
-	import { Heading, SideNav, Text } from '$lib';
+	import { Heading, SideNav, TableOfContents, Text } from '$lib';
 	import navItems from './navItems';
 
 	let { title, description } = $derived($page.data);
 	let { pathname } = $derived($page.url);
+
+	let content: HTMLElement;
 </script>
 
 <svelte:head>
@@ -34,16 +36,24 @@
 
 	<main class="main">
 		<div class="header">
-			<Heading level={1}>{title}</Heading>
+			<Heading id="title" level={1}>{title}</Heading>
 		</div>
 
-		<div class="content readable">
-			<div class="description">
-				<Text class="readable" size="xl">{description}</Text>
+		<article class="content">
+			<div class="readable" bind:this={content}>
+				<div class="description">
+					<Text class="readable" size="xl">{description}</Text>
+				</div>
+
+				<slot />
 			</div>
 
-			<slot />
-		</div>
+			<aside>
+				<slot name="toc">
+					<TableOfContents {content} auto />
+				</slot>
+			</aside>
+		</article>
 	</main>
 </div>
 
@@ -79,27 +89,28 @@
 		padding-bottom: 3rem;
 	}
 
-	.description {
+	.description,
+	aside {
 		padding-top: 3rem;
 	}
 
-	.content > :global(pre) {
+	.readable > :global(pre) {
 		padding-block-start: 1.5rem;
 	}
 
-	.content > :global(.demo) + :global(.code) {
+	.readable > :global(.demo) + :global(.code) {
 		padding-block-start: 0;
 	}
 
-	.content > :global(*) + :global(.text) {
+	.readable > :global(*) + :global(.text) {
 		--text-spacing-top: 1.5rem;
 	}
 
-	.content > :global(*) + :global(.text-xl) {
+	.readable > :global(*) + :global(.text-xl) {
 		--text-spacing-top: 3rem;
 	}
 
-	.content > :global(*) + :global(.heading) {
+	.readable > :global(*) + :global(.heading) {
 		--h2-spacing-top: 2rem;
 		--h3-spacing-top: 2rem;
 		--h4-spacing-top: 2rem;
@@ -121,14 +132,35 @@
 
 		.main {
 			grid-area: main;
-			overflow-y: auto;
+		}
+	}
+
+	@media (max-width: 991px) {
+		aside {
+			display: none;
 		}
 	}
 
 	@media (min-width: 992px) {
 		.header,
 		.content {
-			padding-inline: 5rem;
+			padding-inline-start: 5rem;
+		}
+
+		.content {
+			display: flex;
+			gap: 3rem;
+		}
+
+		.readable {
+			flex: 1 1 100%;
+			max-width: 45rem;
+		}
+
+		aside {
+			flex: 1;
+			max-width: 15rem;
+			position: relative;
 		}
 	}
 </style>

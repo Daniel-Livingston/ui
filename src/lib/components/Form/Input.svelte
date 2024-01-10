@@ -15,8 +15,6 @@
 		class: classname,
 		...props
 	} = $props<InputProps>();
-
-	$inspect(value);
 </script>
 
 <div class={classNames('form__field', classname)} class:error class:required>

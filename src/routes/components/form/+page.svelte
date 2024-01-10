@@ -6,9 +6,9 @@
 	import inputShowcaseCode from './examples/InputShowcase.svelte?raw';
 </script>
 
-<Heading level={2}>Overview</Heading>
+<Heading id="overview" level={2}>Overview</Heading>
 
-<Heading level={2}>Usage</Heading>
+<Heading id="usage" level={2}>Usage</Heading>
 
 <Demo>
 	<InputShowcase />

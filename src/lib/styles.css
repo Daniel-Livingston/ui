@@ -101,10 +101,6 @@ code,
 	font-family: var(--monospace);
 }
 
-main {
-	overflow: auto;
-}
-
 .collapsible {
 	height: auto;
 	overflow: auto;

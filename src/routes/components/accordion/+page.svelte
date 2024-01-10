@@ -6,14 +6,14 @@
 	import example1Code from './examples/BasicUsage.svelte?raw';
 </script>
 
-<Heading level={2}>Overview</Heading>
+<Heading id="overview" level={2}>Overview</Heading>
 
 <Text>
 	An accordion is a collection of collapsible panels. Each panel consists of a header and a body.
 	The header is used to identify the panel and can be clicked to toggle the visibility of the body.
 </Text>
 
-<Heading level={2}>Usage</Heading>
+<Heading id="usage" level={2}>Usage</Heading>
 
 <Text>Click the accordion headings below to expand/collapse the accordion content.</Text>
 
