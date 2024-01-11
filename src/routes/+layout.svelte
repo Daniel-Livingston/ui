@@ -4,11 +4,11 @@
 	import '$lib/styles.css';
 	import 'highlight.js/styles/default.css';
 
-	import { Heading, SideNav, TableOfContents, Text } from '$lib';
-	import navItems from './navItems';
+	import { Heading, TableOfContents, Text } from '$lib';
+
+	import SideNav from './SideNav.svelte';
 
 	let { title, description } = $derived($page.data);
-	let { pathname } = $derived($page.url);
 
 	let content: HTMLElement;
 </script>
@@ -19,20 +19,7 @@
 </svelte:head>
 
 <div class="grid">
-	<SideNav>
-		{#each navItems as navItemGroup, i}
-			{#each navItemGroup as { id, label, items }}
-				<SideNav.Menu {id} {label} open={pathname.includes(id)}>
-					{#each items as { id, label, href }}
-						<SideNav.Link {id} {href} active={href === pathname}>{label}</SideNav.Link>
-					{/each}
-				</SideNav.Menu>
-			{/each}
-			{#if i < navItems.length - 1}
-				<SideNav.Separator />
-			{/if}
-		{/each}
-	</SideNav>
+	<SideNav />
 
 	<main class="main">
 		<div class="header">
