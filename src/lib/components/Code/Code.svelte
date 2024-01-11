@@ -19,10 +19,15 @@
 
 <style>
 	:global(:root) {
+		--code-bg: var(--color-white);
 		--code-tab-size: 2;
 	}
 
 	pre.code {
 		tab-size: var(--code-tab-size);
+	}
+
+	pre.code code {
+		background-color: var(--code-bg);
 	}
 </style>

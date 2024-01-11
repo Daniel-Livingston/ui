@@ -2,7 +2,7 @@
 	import { page } from '$app/stores';
 
 	import '$lib/styles.css';
-	import 'highlight.js/styles/default.css';
+	import 'highlight.js/styles/googlecode.css';
 
 	import { Heading, TableOfContents, Text } from '$lib';
 
@@ -58,7 +58,7 @@
 
 	.header,
 	.content {
-		background-color: var(--_color-light);
+		background-color: var(--color-light);
 		padding-inline: 1rem;
 	}
 

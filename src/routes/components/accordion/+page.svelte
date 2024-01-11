@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { CodeSnippet, Heading, Text } from '$lib';
-	import { Demo, fixCodeSnippet, getCssVariables } from '$lib/internal';
+	import { Demo, fixCodeSnippet } from '$lib/internal';
 
 	import Example1 from './examples/BasicUsage.svelte';
 	import example1Code from './examples/BasicUsage.svelte?raw';

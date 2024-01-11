@@ -52,14 +52,26 @@
 <SideNav>
 	{#each items as itemGroup, i}
 		{#each itemGroup as { id, label, items }}
-			<SideNav.Menu {id} {label} open={$page.url.pathname.includes(id)}>
+			{@const firstInGroup = i === 0}
+			<SideNav.Menu
+				class={firstInGroup ? 'side-nav-menu-first-in-group' : ''}
+				id="side-nav-{id}"
+				{label}
+				open={$page.url.pathname.includes(id)}
+			>
 				{#each items as { id, label, href }}
-					<SideNav.Link {id} {href} active={href === $page.url.pathname}>{label}</SideNav.Link>
+					<SideNav.Link id="side-nav-{id}" {href} active={href === $page.url.pathname}
+						>{label}</SideNav.Link
+					>
 				{/each}
 			</SideNav.Menu>
 		{/each}
-		{#if i < items.length - 1}
-			<SideNav.Separator />
-		{/if}
 	{/each}
 </SideNav>
+
+<style>
+	:global(.side-nav__item:has(.side-nav__menu-first-in-group)) {
+		border: none;
+		border-top: 1px solid rgba(var(--color-dark-rgb), 0.2);
+	}
+</style>

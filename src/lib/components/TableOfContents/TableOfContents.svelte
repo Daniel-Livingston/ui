@@ -8,13 +8,6 @@
 
 	let { auto, content, label = 'On this page', ...props } = $props<TableOfContentsProps>();
 
-	type Item = {
-		id: string;
-		label: string;
-		href: string;
-		items?: Item[];
-	};
-
 	let items = $derived($navigating ? getTocItems(content) : getTocItems(content));
 </script>
 
@@ -24,13 +17,13 @@
 		{#if auto && items && items.length > 0}
 			{#each items as { id, label, href, items: nestedItems } (id)}
 				{#if nestedItems}
-					<TableOfContentsMenu {id} {href} {label}>
+					<TableOfContentsMenu {href} {label}>
 						{#each nestedItems as { id, label, href } (id)}
-							<TableOfContentsLink {id} {href}>{label}</TableOfContentsLink>
+							<TableOfContentsLink {href}>{label}</TableOfContentsLink>
 						{/each}
 					</TableOfContentsMenu>
 				{:else}
-					<TableOfContentsLink {id} {href}>{label}</TableOfContentsLink>
+					<TableOfContentsLink {href}>{label}</TableOfContentsLink>
 				{/if}
 			{/each}
 		{:else}

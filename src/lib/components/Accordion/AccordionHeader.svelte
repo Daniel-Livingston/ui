@@ -29,14 +29,17 @@
 	}
 
 	.accordion__header.open {
-		background-color: var(--accordion-button-bg-open);
 		border-bottom: var(--accordion-button-border-width) solid var(--accordion-button-border-color);
 		color: var(--accordion-button-color-open);
 	}
 
+	.accordion__header.open .accordion__button {
+		background-color: var(--accordion-button-bg-open);
+	}
+
 	.accordion__button {
 		align-items: center;
-		background-color: var(--accordion-button-bg, transparent);
+		background-color: var(--accordion-button-bg);
 		border: none;
 		color: inherit;
 		display: flex;

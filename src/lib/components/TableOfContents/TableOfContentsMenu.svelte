@@ -4,12 +4,13 @@
 	import TableOfContentsItem from './TableOfContentsItem.svelte';
 	import TableOfContentsLink from './TableOfContentsLink.svelte';
 	import type { TableOfContentsMenuProps } from './types';
+	import TableOfContentsAnchor from './TableOfContentsAnchor.svelte';
 
 	let { class: classname, href, label, ...props } = $props<TableOfContentsMenuProps>();
 </script>
 
 <TableOfContentsItem>
-	<TableOfContentsLink {href}>{label}</TableOfContentsLink>
+	<TableOfContentsAnchor {href}>{label}</TableOfContentsAnchor>
 
 	<ul class={classNames('toc__menu', classname)} {...props}>
 		<slot />

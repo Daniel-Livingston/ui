@@ -20,7 +20,7 @@
 		--accordion-button-border-color: rgba(var(--color-dark-rgb), 0.2);
 		--accordion-button-border-width: 1px;
 		--accordion-button-color: inherit;
-		--accordion-button-color-open: var(--color-primary);
+		--accordion-button-color-open: var(--color-primary-700);
 		--accordion-button-focus-outline-color: var(--color-primary);
 		--accordion-button-focus-outline-offset: 2px;
 		--accordion-button-focus-outline-width: 2px;

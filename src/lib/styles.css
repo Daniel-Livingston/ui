@@ -45,6 +45,8 @@ h6 {
 /* Colors and theming. */
 :root {
 	--color-primary-rgb: 0, 123, 255;
+	--color-primary-700-rgb: 0, 86, 179;
+	--color-primary-900-rgb: 0, 55, 122;
 	--color-secondary-rgb: 108, 117, 125;
 	--color-success-rgb: 40, 167, 69;
 	--color-info-rgb: 23, 162, 184;
@@ -56,6 +58,8 @@ h6 {
 	--color-black-rgb: 0, 0, 0;
 
 	--color-primary: rgb(var(--color-primary-rgb));
+	--color-primary-700: rgb(var(--color-primary-700-rgb));
+	--color-primary-900: rgb(var(--color-primary-900-rgb));
 	--color-secondary: rgb(var(--color-secondary-rgb));
 	--color-success: rgb(var(--color-success-rgb));
 	--color-info: rgb(var(--color-info-rgb));
