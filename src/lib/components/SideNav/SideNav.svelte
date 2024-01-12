@@ -15,28 +15,47 @@
 <style>
 	:global(:root) {
 		--side-nav-border-width: 1px;
-		--side-nav-border-color: rgba(var(--color-dark-rgb), 0.2);
 
-		--side-nav-item-bg: var(--color-white);
-		--side-nav-item-color: var(--color-dark);
 		--side-nav-item-font-size: var(--font-size-md);
 
 		--side-nav-link-bg: transparent;
-		--side-nav-link-bg-hover: var(--color-light);
 		--side-nav-link-font-weight: 400;
 		--side-nav-link-spacing-x: 0.5rem;
 		--side-nav-link-spacing-y: 0.25rem;
 		--side-nav-link-spacing-start-nested: 1.5rem;
-		--side-nav-link-active-bg: var(--color-light);
-		--side-nav-link-active-color: var(--color-primary-700);
 		--side-nav-link-active-font-weight: 700;
 
 		--side-nav-menu-button-font-weight: 600;
 		--side-nav-menu-button-bg: transparent;
-		--side-nav-menu-button-bg-hover: var(--color-light);
 
 		--side-nav-separator-color: rgba(var(--color-dark-rgb), 0.2);
 		--side-nav-separator-width: 1px;
+	}
+
+	@media (prefers-color-scheme: light) {
+		:global(:root) {
+			--side-nav-item-bg: var(--color-white);
+			--side-nav-item-border-color: rgba(var(--color-dark-rgb), 0.2);
+			--side-nav-item-color: var(--color-dark);
+			--side-nav-link-active-bg: var(--color-light);
+
+			--side-nav-link-active-color: var(--color-primary-700);
+			--side-nav-link-bg-hover: var(--color-light);
+
+			--side-nav-menu-button-bg-hover: var(--color-light);
+		}
+	}
+
+	@media (prefers-color-scheme: dark) {
+		:global(:root) {
+			--side-nav-item-bg: var(--color-black);
+			--side-nav-item-border-color: rgba(var(--color-light-rgb), 0.2);
+			--side-nav-item-color: var(--color-gray-100);
+			--side-nav-link-active-bg: var(--color-dark);
+			--side-nav-link-active-color: var(--color-primary-300);
+			--side-nav-link-bg-hover: var(--color-dark);
+			--side-nav-menu-button-bg-hover: var(--color-dark);
+		}
 	}
 
 	@media (max-width: 767px) {

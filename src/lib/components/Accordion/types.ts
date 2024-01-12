@@ -15,12 +15,12 @@ export interface AccordionItemProps extends HTMLAttributes<HTMLDivElement> {
 
 export interface AccordionHeaderProps {
 	children: Snippet<void>;
-	ref: HTMLButtonElement;
+	ref: HTMLButtonElement | undefined;
 	open: boolean;
 }
 
 export interface AccordionBodyProps extends HTMLAttributes<HTMLDivElement> {
 	children: Snippet<void>;
-	controller: HTMLButtonElement;
+	controller: HTMLButtonElement | undefined;
 	open: boolean;
 }

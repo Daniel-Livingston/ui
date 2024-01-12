@@ -21,6 +21,10 @@
 <style>
 	:global(:root) {
 		--badge-bg: transparent;
+		--badge-spacing-x: 0.5rem;
+		--badge-spacing-y: 0.15rem;
+		--badge-border-radius: 1rem;
+
 		--badge-bg-primary: rgba(var(--color-primary-rgb), 0.8);
 		--badge-bg-secondary: rgba(var(--color-secondary-rgb), 0.8);
 		--badge-bg-success: rgba(var(--color-success-rgb), 0.8);
@@ -30,20 +34,26 @@
 		--badge-bg-light: rgba(var(--color-light-rgb), 0.8);
 		--badge-bg-dark: rgba(var(--color-dark-rgb), 0.8);
 
-		--badge-color: var(--color-black);
 		--badge-color-primary: var(--color-white);
 		--badge-color-secondary: var(--color-white);
-		--badge-color-success: var(--color-white);
+		--badge-color-success: var(--color-black);
 		--badge-color-danger: var(--color-white);
 		--badge-color-warning: var(--color-black);
 		--badge-color-info: var(--color-white);
 		--badge-color-light: var(--color-black);
 		--badge-color-dark: var(--color-white);
+	}
 
-		--badge-spacing-x: 0.5rem;
-		--badge-spacing-y: 0.15rem;
+	@media (prefers-color-scheme: light) {
+		:global(:root) {
+			--badge-color: var(--color-black);
+		}
+	}
 
-		--badge-border-radius: 1rem;
+	@media (prefers-color-scheme: dark) {
+		:global(:root) {
+			--badge-color: var(--color-white);
+		}
 	}
 
 	.badge {

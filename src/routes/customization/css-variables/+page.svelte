@@ -7,7 +7,7 @@
 	const typographyStyles = styles.match(/\/\* Typography\. \*\/\n(:root {\n[^}]+})/)![1];
 </script>
 
-<Heading level={2}>Overview</Heading>
+<Heading id="overview" level={2}>Overview</Heading>
 
 <Text>
 	This UI library includes many CSS variables that can be overridden to customize the look and feel
@@ -19,7 +19,7 @@
 	and more.
 </Text>
 
-<Heading level={2}>Theme Variables</Heading>
+<Heading id="theme-variables" level={2}>Theme Variables</Heading>
 
 <Text>
 	The following variables are used to define the base theme colors. Their defaults are also

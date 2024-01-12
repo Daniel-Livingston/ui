@@ -8,7 +8,7 @@
 
 	let { label, open = false, class: classname, ...props } = $props<SideNavMenuProps>();
 
-	let controller: HTMLButtonElement;
+	let controller = $state<HTMLButtonElement | undefined>(undefined);
 </script>
 
 <SideNavItem>
@@ -30,6 +30,7 @@
 	.side-nav__menu-button {
 		align-items: center;
 		background-color: var(--side-nav-menu-button-bg);
+		color: inherit;
 		border: none;
 		cursor: pointer;
 		display: flex;

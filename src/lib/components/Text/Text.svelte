@@ -12,7 +12,6 @@
 
 <style>
 	:global(:root) {
-		--text-color: var(--color-dark);
 		--text-font-family: var(--sans-serif);
 		--text-font-size: var(--font-size-base);
 		--text-font-weight: var(--font-weight-normal);
@@ -25,6 +24,18 @@
 		--text-font-size-md: var(--font-size-md);
 		--text-font-size-lg: var(--font-size-lg);
 		--text-font-size-xl: var(--font-size-xl);
+	}
+
+	@media (prefers-color-scheme: light) {
+		:global(:root) {
+			--text-color: var(--color-dark);
+		}
+	}
+
+	@media (prefers-color-scheme: dark) {
+		:global(:root) {
+			--text-color: var(--color-light);
+		}
 	}
 
 	.text {

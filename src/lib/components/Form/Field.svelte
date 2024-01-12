@@ -43,25 +43,23 @@
 		--form-field-description-font-weight: 400;
 		--form-field-description-line-height: var(--body-line-height);
 		--form-field-description-spacing-top: 0.25rem;
-		--form-field-error-color: var(--color-danger);
 		--form-field-error-font-family: var(--sans-serif);
 		--form-field-error-font-size: var(--font-size-sm);
 		--form-field-error-font-weight: 400;
 		--form-field-error-line-height: var(--body-line-height);
-		--form-fielderror-spacing-top: 0.25rem;
-		--form-input-border-color: rgba(var(--color-dark-rgb), 0.2);
+		--form-field-error-spacing-top: 0.25rem;
+
 		--form-input-border-width: 1px;
-		--form-input-color: var(--color-dark);
 		--form-input-font-family: var(--sans-serif);
 		--form-input-font-size: var(--body-font-size);
 		--form-input-font-weight: 400;
 		--form-input-line-height: var(--body-line-height);
-		--form-input-placeholder-color: rgba(var(--color-dark-rgb), 0.5);
 		--form-input-padding-x: 0.75rem;
 		--form-input-padding-y: 0.5rem;
 		--form-input-focus-outline-color: var(--color-primary);
 		--form-input-focus-outline-offset: 2px;
 		--form-input-focus-outline-width: 2px;
+
 		--form-label-font-family: var(--sans-serif);
 		--form-label-font-size: var(--body-font-size);
 		--form-label-font-weight: 500;
@@ -69,6 +67,31 @@
 		--form-label-spacing: 0.5rem;
 		--form-label-required-color: var(--color-danger);
 		--form-label-required-spacing: 0.25rem;
+	}
+
+	@media (prefers-color-scheme: light) {
+		:global(:root) {
+			--form-field-error-color: var(--color-danger);
+			--form-input-bg: var(--color-light);
+			--form-input-border-color: rgba(var(--color-dark-rgb), 0.2);
+			--form-input-color: var(--color-black);
+			--form-input-placeholder-color: rgba(var(--color-dark-rgb), 0.5);
+		}
+	}
+
+	@media (prefers-color-scheme: dark) {
+		:global(:root) {
+			--form-field-error-color: var(--color-danger-300);
+
+			--form-input-bg: var(--color-gray-900);
+			--form-input-border-color: rgba(var(--color-light-rgb), 0.2);
+			--form-input-color: var(--color-white);
+			--form-input-placeholder-color: rgba(var(--color-light-rgb), 0.5);
+		}
+
+		.form__field :global(.form__input) {
+			color-scheme: dark;
+		}
 	}
 
 	:global(.form__field) + :where(.form__field) {
@@ -113,6 +136,7 @@
 	}
 
 	.form__field :global(.form__input) {
+		background-color: var(--form-input-bg);
 		border: var(--form-input-border-width) solid var(--form-input-border-color);
 		color: var(--form-input-color);
 		display: block;
@@ -130,9 +154,13 @@
 		outline-offset: var(--form-input-focus-outline-offset);
 	}
 
-	.form__field :global(.form__input::placeholder),
+	.form__field :global(.form__input::placeholder) {
+		color: var(--form-input-placeholder-color);
+	}
+
 	.form__field :global(.form__input::-ms-input-placeholder) {
 		color: var(--form-input-placeholder-color);
+		opacity: 1;
 	}
 
 	.form__error {

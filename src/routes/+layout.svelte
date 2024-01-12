@@ -2,7 +2,8 @@
 	import { page } from '$app/stores';
 
 	import '$lib/styles.css';
-	import 'highlight.js/styles/googlecode.css';
+	import light from '$lib/internal/styles/github.css?url';
+	import dark from '$lib/internal/styles/github-dark.css?url';
 
 	import { Heading, TableOfContents, Text } from '$lib';
 
@@ -10,12 +11,15 @@
 
 	let { title, description } = $derived($page.data);
 
-	let content: HTMLElement;
+	let content = $state<HTMLElement | undefined>(undefined);
 </script>
 
 <svelte:head>
 	<title>{title}</title>
 	<meta name="description" content={description} />
+
+	<link rel="stylesheet" href={light} media="(prefers-color-scheme: light)" />
+	<link rel="stylesheet" href={dark} media="(prefers-color-scheme: dark)" />
 </svelte:head>
 
 <div class="grid">
@@ -58,12 +62,7 @@
 
 	.header,
 	.content {
-		background-color: var(--color-light);
 		padding-inline: 1rem;
-	}
-
-	.header {
-		border-bottom: 1px solid rgba(var(--color-dark-rgb), 0.2);
 	}
 
 	.header :global(.h1) {
@@ -148,6 +147,28 @@
 			flex: 1;
 			max-width: 15rem;
 			position: relative;
+		}
+	}
+
+	@media (prefers-color-scheme: light) {
+		.header,
+		.content {
+			background-color: var(--color-light);
+		}
+
+		.header {
+			border-bottom: 1px solid rgba(var(--color-dark-rgb), 0.2);
+		}
+	}
+
+	@media (prefers-color-scheme: dark) {
+		.header,
+		.content {
+			background-color: var(--color-gray-900);
+		}
+
+		.header {
+			border-bottom: 1px solid rgba(var(--color-light-rgb), 0.2);
 		}
 	}
 </style>

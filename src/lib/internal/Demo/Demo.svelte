@@ -6,11 +6,23 @@
 
 <style>
 	:global(:root) {
-		--demo-bg: var(--color-white);
-		--demo-border-color: rgba(var(--color-dark-rgb), 0.2);
 		--demo-border-width: 1px;
 		--demo-padding: 1.5rem;
 		--demo-spacing-top: 1.5rem;
+	}
+
+	@media (prefers-color-scheme: light) {
+		:global(:root) {
+			--demo-bg: var(--color-white);
+			--demo-border-color: rgba(var(--color-dark-rgb), 0.2);
+		}
+	}
+
+	@media (prefers-color-scheme: dark) {
+		:global(:root) {
+			--demo-bg: var(--color-black);
+			--demo-border-color: rgba(var(--color-light-rgb), 0.2);
+		}
 	}
 
 	.demo {

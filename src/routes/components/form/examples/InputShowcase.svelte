@@ -90,7 +90,12 @@
 
 	<Form.DatePicker id="date" name="date" label="Date picker" bind:value={date} />
 
-	<Form.DateTimePicker id="date" name="date" label="Datetime picker" bind:value={datetime} />
+	<Form.DateTimePicker
+		id="datetime"
+		name="datetime"
+		label="Datetime picker"
+		bind:value={datetime}
+	/>
 
 	<Form.FileUploader
 		id="file"

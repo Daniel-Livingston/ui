@@ -14,7 +14,6 @@
 
 <style>
 	:global(:root) {
-		--heading-color: var(--color-dark);
 		--heading-font-family: var(--sans-serif);
 		--heading-font-size: var(--font-size-lg);
 		--heading-font-weight: 700;
@@ -69,6 +68,18 @@
 		--h6-line-height: var(--heading-line-height);
 		--h6-spacing-top: var(--heading-spacing-top);
 		--h6-spacing-bottom: var(--heading-spacing-bottom);
+	}
+
+	@media (prefers-color-scheme: light) {
+		:global(:root) {
+			--heading-color: var(--color-dark);
+		}
+	}
+
+	@media (prefers-color-scheme: dark) {
+		:global(:root) {
+			--heading-color: var(--color-light);
+		}
 	}
 
 	.heading {

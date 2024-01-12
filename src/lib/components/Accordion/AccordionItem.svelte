@@ -6,7 +6,7 @@
 	let { id, label, open = false, class: classname, ...props } = $props<AccordionItemProps>();
 
 	// todo: fix this somehow
-	let controller: HTMLButtonElement;
+	let controller = $state<HTMLButtonElement | undefined>(undefined);
 </script>
 
 <div class="accordion__item {classname}" {...props}>

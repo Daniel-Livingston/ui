@@ -71,10 +71,9 @@
 		--button-border-radius-rounded: 0.25rem;
 		--button-border-width: 1px;
 
-		--button-color: var(--color-black);
 		--button-color-primary: var(--color-white);
 		--button-color-secondary: var(--color-white);
-		--button-color-success: var(--color-white);
+		--button-color-success: var(--color-black);
 		--button-color-danger: var(--color-white);
 		--button-color-warning: var(--color-black);
 		--button-color-info: var(--color-black);
@@ -101,14 +100,13 @@
 		--button-padding-y-lg: 1rem;
 		--button-padding-y-xl: 1.5rem;
 
-		--button-focus-outline-color: var(--color-black);
 		--button-focus-outline-color-primary: var(--color-primary);
 		--button-focus-outline-color-secondary: var(--color-secondary);
 		--button-focus-outline-color-success: var(--color-success);
 		--button-focus-outline-color-danger: var(--color-danger);
 		--button-focus-outline-color-warning: var(--color-warning);
 		--button-focus-outline-color-info: var(--color-info);
-		--button-focus-outline-color-light: var(--color-black);
+		--button-focus-outline-color-light: var(--color-light);
 		--button-focus-outline-color-dark: var(--color-dark);
 		--button-focus-outline-offset: 2px;
 		--button-focus-outline-width: 2px;
@@ -116,11 +114,25 @@
 		--button-hover-bg: transparent;
 	}
 
+	@media (prefers-color-scheme: light) {
+		:global(:root) {
+			--button-color: var(--color-black);
+			--button-focus-outline-color: var(--color-black);
+		}
+	}
+
+	@media (prefers-color-scheme: dark) {
+		:global(:root) {
+			--button-color: var(--color-white);
+			--button-focus-outline-color: var(--color-white);
+		}
+	}
+
 	.button {
 		background-color: var(--button-bg);
 		border: var(--button-border-width) solid var(--button-border-color);
 		border-radius: var(--button-border-radius);
-		color: var(--_text-color-button, var(--color-black));
+		color: var(--button-color);
 		font-size: var(--button-font-size);
 		padding: var(--button-padding-y) var(--button-padding-x);
 		transition: background-color 0.2s ease-in-out;
