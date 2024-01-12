@@ -33,6 +33,7 @@
 
 	.side-nav__link.active {
 		background-color: var(--side-nav-link-active-bg);
+		color: var(--side-nav-link-active-color);
 		font-weight: var(--side-nav-link-active-font-weight);
 	}
 </style>

@@ -28,6 +28,7 @@
 		--side-nav-link-spacing-y: 0.25rem;
 		--side-nav-link-spacing-start-nested: 1.5rem;
 		--side-nav-link-active-bg: var(--color-light);
+		--side-nav-link-active-color: var(--color-primary-700);
 		--side-nav-link-active-font-weight: 700;
 
 		--side-nav-menu-button-font-weight: 600;
