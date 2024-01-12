@@ -82,7 +82,6 @@
 	@media (prefers-color-scheme: dark) {
 		:global(:root) {
 			--form-field-error-color: var(--color-danger-300);
-
 			--form-input-bg: var(--color-gray-900);
 			--form-input-border-color: rgba(var(--color-light-rgb), 0.2);
 			--form-input-color: var(--color-white);
