@@ -1,34 +1,13 @@
 <script lang="ts">
-	import { navigating } from '$app/stores';
-
 	import type { TableOfContentsProps } from './types';
-	import TableOfContentsLink from './TableOfContentsLink.svelte';
-	import TableOfContentsMenu from './TableOfContentsMenu.svelte';
-	import { getTocItems } from './utils';
 
-	let { auto, content, label = 'On this page', ...props } = $props<TableOfContentsProps>();
-
-	let items = $derived($navigating ? getTocItems(content) : getTocItems(content));
+	let { label = 'On this page', ...props } = $props<TableOfContentsProps>();
 </script>
 
 <nav class="toc">
 	<h2 class="toc__heading">{label}</h2>
 	<ul class="toc__items" {...props}>
-		{#if auto && items && items.length > 0}
-			{#each items as { id, label, href, items: nestedItems } (id)}
-				{#if nestedItems}
-					<TableOfContentsMenu {href} {label}>
-						{#each nestedItems as { id, label, href } (id)}
-							<TableOfContentsLink {href}>{label}</TableOfContentsLink>
-						{/each}
-					</TableOfContentsMenu>
-				{:else}
-					<TableOfContentsLink {href}>{label}</TableOfContentsLink>
-				{/if}
-			{/each}
-		{:else}
-			<slot />
-		{/if}
+		<slot />
 	</ul>
 </nav>
 

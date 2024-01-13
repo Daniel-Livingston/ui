@@ -1,22 +1,10 @@
 import type { Snippet } from 'svelte';
 import type { HTMLAttributes, HTMLAnchorAttributes, HTMLMenuAttributes } from 'svelte/elements';
 
-interface BaseTableOfContentsProps extends HTMLMenuAttributes {
+export interface TableOfContentsProps extends HTMLMenuAttributes {
+	children: Snippet;
 	label?: string;
 }
-
-interface AutoTableOfContentsProps extends Omit<BaseTableOfContentsProps, 'children'> {
-	auto: true;
-	content: HTMLElement;
-}
-
-interface ManualTableOfContentsProps extends BaseTableOfContentsProps {
-	children: Snippet;
-	content?: never;
-	auto?: false;
-}
-
-export type TableOfContentsProps = AutoTableOfContentsProps | ManualTableOfContentsProps;
 
 export interface TableOfContentsMenuProps extends HTMLAttributes<HTMLUListElement> {
 	href: string;

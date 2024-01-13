@@ -9,3 +9,5 @@ export type Variant =
 	| 'info'
 	| 'light'
 	| 'dark';
+
+export type TOCItem = string | { label: string; id?: string; href?: string; items?: TOCItem[] };

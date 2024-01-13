@@ -33,6 +33,7 @@ export { Navbar } from './Navbar';
 export { Pagination } from './Pagination';
 export { Progress, ProgressBar, ProgressIndicator } from './Progress';
 export { Search } from './Search';
+export { SEO } from './SEO';
 export { SideNav } from './SideNav';
 export { TableOfContents } from './TableOfContents';
 export { Tabs } from './Tabs';
