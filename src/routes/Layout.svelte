@@ -12,9 +12,7 @@
 </script>
 
 <div class="layout">
-	<div class="nav">
-		<slot name="side-nav" />
-	</div>
+	<slot name="side-nav" />
 
 	<main class="main">
 		<header class="header">
