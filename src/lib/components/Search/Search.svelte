@@ -65,7 +65,8 @@
 		background-color: var(--search-input-bg);
 		border: var(--search-input-border-width) solid var(--search-input-border-color);
 		color: var(--search-input-color);
-		padding: var(--search-input-padding-y) calc(var(--search-input-padding-x) * 2 + 8px);
+		padding: var(--search-input-padding-y) var(--search-input-padding-x)
+			var(--search-input-padding-y) calc(var(--search-input-padding-x) * 2 + 8px);
 		width: 100%;
 	}
 
