@@ -5,13 +5,14 @@
 
 	type TableOfContentsProps = {
 		items?: TOCItem[];
+		label?: string;
 	};
 
-	let { items } = $props<TableOfContentsProps>();
+	let { items, label } = $props<TableOfContentsProps>();
 </script>
 
 {#if items}
-	<TOC>
+	<TOC {label}>
 		{#each items as item (typeof item === 'string' ? slugify(item) : item.label)}
 			{#if typeof item === 'object'}
 				{@const label = item.label}

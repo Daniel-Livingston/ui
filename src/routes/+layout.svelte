@@ -27,5 +27,5 @@
 <Layout {title} {description}>
 	<SideNav slot="side-nav" />
 	<slot />
-	<TableOfContents slot="toc" items={toc} />
+	<TableOfContents slot="toc" items={toc} label={title ? title : 'On this page'} />
 </Layout>
