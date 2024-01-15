@@ -11,6 +11,7 @@
 	let { title, description } = $props<LayoutProps>();
 </script>
 
+<slot name="navbar" />
 <div class="layout">
 	<slot name="side-nav" />
 

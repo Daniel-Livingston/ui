@@ -9,6 +9,7 @@
 
 	// Page Layout components.
 	import Layout from './Layout.svelte';
+	import Navbar from './Navbar.svelte';
 	import SideNav from './SideNav.svelte';
 	import TableOfContents from './TableOfContents.svelte';
 
@@ -25,6 +26,7 @@
 </svelte:head>
 
 <Layout {title} {description}>
+	<Navbar slot="navbar" />
 	<SideNav slot="side-nav" />
 	<slot />
 	<TableOfContents slot="toc" items={toc} label={title ? title : 'On this page'} />

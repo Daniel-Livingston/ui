@@ -13,6 +13,8 @@ export interface CloseIconProps extends IconProps {}
 
 export interface InfoIconProps extends IconProps {}
 
+export interface SearchIconProps extends IconProps {}
+
 export interface SuccessIconProps extends IconProps {}
 
 export interface WarningIconProps extends IconProps {}
