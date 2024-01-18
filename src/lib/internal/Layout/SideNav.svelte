@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { page } from '$app/stores';
-	import { SideNav } from '$lib';
+	import { SideNav } from '$lib/components';
+	import type { SideNavProps } from './types';
 
 	const items = [
 		[
@@ -47,6 +48,8 @@
 			}
 		]
 	];
+
+	let {} = $props<SideNavProps>();
 </script>
 
 <SideNav>

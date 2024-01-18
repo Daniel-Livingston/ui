@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Navbar, Search } from '$lib';
+	import { Navbar, Search } from '$lib/components';
 </script>
 
 <Navbar>

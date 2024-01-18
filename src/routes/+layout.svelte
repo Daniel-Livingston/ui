@@ -8,10 +8,7 @@
 	import dark from '$lib/internal/styles/github-dark.css?url';
 
 	// Page Layout components.
-	import Layout from './Layout.svelte';
-	import Navbar from './Navbar.svelte';
-	import SideNav from './SideNav.svelte';
-	import TableOfContents from './TableOfContents.svelte';
+	import { Layout, Navbar, SideNav, TableOfContents } from '$lib/internal/Layout';
 
 	let { title, description, toc } = $derived($page.data);
 

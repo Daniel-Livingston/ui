@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Heading, Text } from '$lib';
+	import { Heading, Text } from '$lib/components';
 	import type { Snippet } from 'svelte';
 
 	type LayoutProps = {
@@ -37,9 +37,23 @@
 </div>
 
 <style>
+	:global(html) {
+		height: 100%;
+	}
+
 	:global(body) {
 		min-height: 100dvh;
 		height: 100%;
+	}
+
+	:global(body > div) {
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+	}
+
+	.layout {
+		flex: 1;
 	}
 
 	.main {
