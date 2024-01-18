@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { CodeSnippet, Heading } from '$lib';
-	import { Demo } from '$lib/internal';
+	import { Demo } from '$lib/internal/site/components';
 
 	import Basic from './examples/Basic.svelte';
 	import basicCode from './examples/Basic.svelte?raw';

@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { TableOfContents as TOC } from '$lib/components';
-	import { slugify } from '$lib/internal';
+	import { slugify } from '$lib/internal/utils';
 	import type { TableOfContentsProps } from './types';
 
 	let { items, label } = $props<TableOfContentsProps>();

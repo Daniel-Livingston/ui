@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { CodeSnippet, Heading, Text } from '$lib';
-	import { Demo, fixCodeSnippet, getCssVariables } from '$lib/internal';
+	import { Demo } from '$lib/internal/site/components';
+	import { fixCodeSnippet } from '$lib/internal/utils';
 
 	import SupportedVariantsExample from './examples/SupportedVariants.svelte';
 	import supportedVariantsExampleCode from './examples/SupportedVariants.svelte?raw';

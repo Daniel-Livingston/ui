@@ -1,14 +1,12 @@
 <script lang="ts">
 	import { page } from '$app/stores';
+
 	import { SEO, seo } from '$lib';
-
-	// Styles.
 	import '$lib/styles.css';
-	import light from '$lib/internal/styles/github.css?url';
-	import dark from '$lib/internal/styles/github-dark.css?url';
 
-	// Page Layout components.
-	import { Layout, Navbar, SideNav, TableOfContents } from '$lib/internal/Layout';
+	import light from '$lib/internal/site/styles/github.css?url';
+	import dark from '$lib/internal/site/styles/github-dark.css?url';
+	import { Layout, Navbar, SideNav, TableOfContents } from '$lib/internal/site/layout';
 
 	let { title, description, toc } = $derived($page.data);
 

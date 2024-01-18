@@ -1,6 +1,6 @@
 // See https://kit.svelte.dev/docs/types#app
 // for information about these interfaces
-import type { TOCItem } from '$lib/internal';
+import type { TOCItem } from '$lib/internal/types';
 
 declare global {
 	namespace App {

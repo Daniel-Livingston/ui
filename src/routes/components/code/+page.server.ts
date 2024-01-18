@@ -1,5 +1,5 @@
 import type { PageServerLoad } from './$types';
-import { getCssVariables } from '$lib/internal';
+import { getCssVariables } from '$lib/internal/utils';
 import rawComponent from '$lib/components/Code/Code.svelte?raw';
 
 export const load: PageServerLoad = async () => {
