@@ -29,12 +29,12 @@
 <style>
 	.side-nav__menu-button {
 		align-items: center;
-		background-color: var(--side-nav-menu-button-bg);
+		background-color: var(--side-nav-item-bg);
 		color: inherit;
 		border: none;
 		cursor: pointer;
 		display: flex;
-		font-weight: var(--side-nav-menu-button-font-weight);
+		font-weight: var(--side-nav-item-font-weight);
 		justify-content: space-between;
 		width: 100%;
 	}
@@ -50,6 +50,6 @@
 	}
 
 	.side-nav__menu-button:hover {
-		background-color: var(--side-nav-menu-button-bg-hover);
+		background-color: var(--side-nav-item-bg-hover);
 	}
 </style>

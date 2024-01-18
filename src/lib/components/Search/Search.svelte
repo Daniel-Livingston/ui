@@ -21,6 +21,8 @@
 		--search-input-padding-x: 0.75rem;
 		--search-input-padding-y: 0.5rem;
 
+		--search-input-bg: var(--alt-bg);
+		--search-input-border-color: var(--border-color);
 		--search-input-border-width: 1px;
 
 		--search-input-focus-outline-color: var(--color-primary);
@@ -31,8 +33,6 @@
 	@media (prefers-color-scheme: light) {
 		:global(:root) {
 			--search-icon-color: rgba(var(--color-dark-rgb), 0.5);
-			--search-input-bg: var(--color-light);
-			--search-input-border-color: rgba(var(--color-dark-rgb), 0.2);
 			--search-input-color: var(--color-dark);
 		}
 	}
@@ -40,8 +40,6 @@
 	@media (prefers-color-scheme: dark) {
 		:global(:root) {
 			--search-icon-color: rgba(var(--color-light-rgb), 0.5);
-			--search-input-bg: var(--color-black);
-			--search-input-border-color: rgba(var(--color-light-rgb), 0.2);
 			--search-input-color: var(--color-gray-100);
 		}
 	}

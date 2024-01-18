@@ -49,6 +49,8 @@
 		--form-field-error-line-height: var(--body-line-height);
 		--form-field-error-spacing-top: 0.25rem;
 
+		--form-input-bg: var(--alt-bg);
+		--form-input-border-color: var(--border-color);
 		--form-input-border-width: 1px;
 		--form-input-font-family: var(--sans-serif);
 		--form-input-font-size: var(--body-font-size);
@@ -72,8 +74,6 @@
 	@media (prefers-color-scheme: light) {
 		:global(:root) {
 			--form-field-error-color: var(--color-danger);
-			--form-input-bg: var(--color-light);
-			--form-input-border-color: rgba(var(--color-dark-rgb), 0.2);
 			--form-input-color: var(--color-black);
 			--form-input-placeholder-color: rgba(var(--color-dark-rgb), 0.5);
 		}
@@ -82,8 +82,6 @@
 	@media (prefers-color-scheme: dark) {
 		:global(:root) {
 			--form-field-error-color: var(--color-danger-300);
-			--form-input-bg: var(--color-gray-900);
-			--form-input-border-color: rgba(var(--color-light-rgb), 0.2);
 			--form-input-color: var(--color-white);
 			--form-input-placeholder-color: rgba(var(--color-light-rgb), 0.5);
 		}

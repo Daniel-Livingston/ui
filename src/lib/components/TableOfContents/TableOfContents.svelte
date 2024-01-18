@@ -13,6 +13,7 @@
 
 <style>
 	:global(:root) {
+		--toc-heading-border-color: var(--border-color);
 		--toc-heading-border-width: 1px;
 		--toc-heading-font-family: var(--sans-serif);
 		--toc-heading-font-size: var(--font-size-lg);
@@ -33,7 +34,6 @@
 
 	@media (prefers-color-scheme: light) {
 		:global(:root) {
-			--toc-heading-border-color: rgba(var(--color-dark-rgb), 0.2);
 			--toc-heading-color: var(--color-dark);
 			--toc-link-color: var(--color-dark);
 		}
@@ -41,7 +41,6 @@
 
 	@media (prefers-color-scheme: dark) {
 		:global(:root) {
-			--toc-heading-border-color: rgba(var(--color-light-rgb), 0.2);
 			--toc-heading-color: var(--color-light);
 			--toc-link-color: var(--color-light);
 		}

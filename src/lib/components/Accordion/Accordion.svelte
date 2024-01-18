@@ -16,6 +16,7 @@
 <style>
 	:global(:root) {
 		--accordion-button-bg: transparent;
+		--accordion-button-border-color: var(--border-color);
 		--accordion-button-border-width: 1px;
 		--accordion-button-color: inherit;
 		--accordion-button-focus-outline-color: var(--color-primary);
@@ -30,6 +31,7 @@
 		--accordion-header-line-height: var(--body-line-height);
 		--accordion-header-padding: 0.75rem;
 
+		--accordion-item-border-color: var(--border-color);
 		--accordion-item-border-width: 1px;
 	}
 
@@ -38,9 +40,6 @@
 		:global(:root) {
 			--accordion-button-bg-open: var(--color-light);
 			--accordion-button-color-open: var(--color-primary-700);
-			--accordion-button-border-color: rgba(var(--color-dark-rgb), 0.2);
-
-			--accordion-item-border-color: rgba(var(--color-dark-rgb), 0.2);
 		}
 	}
 
@@ -48,9 +47,6 @@
 		:global(:root) {
 			--accordion-button-bg-open: var(--color-gray-900);
 			--accordion-button-color-open: var(--color-primary-300);
-			--accordion-button-border-color: rgba(var(--color-light-rgb), 0.2);
-
-			--accordion-item-border-color: rgba(var(--color-light-rgb), 0.2);
 		}
 	}
 </style>

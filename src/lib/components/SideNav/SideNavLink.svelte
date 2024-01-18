@@ -13,7 +13,7 @@
 
 <style>
 	.side-nav__link {
-		background-color: var(--side-nav-link-bg);
+		background-color: var(--side-nav-item-bg);
 		color: inherit;
 		display: block;
 		font: inherit;
@@ -23,7 +23,7 @@
 	}
 
 	.side-nav__link:hover {
-		background-color: var(--side-nav-link-bg-hover);
+		background-color: var(--side-nav-item-bg-hover);
 	}
 
 	:global(.side-nav__menu) .side-nav__link {
@@ -32,7 +32,7 @@
 	}
 
 	.side-nav__link.active {
-		background-color: var(--side-nav-link-active-bg);
+		background-color: var(--side-nav-item-active-bg);
 		color: var(--side-nav-link-active-color);
 		font-weight: var(--side-nav-link-active-font-weight);
 	}

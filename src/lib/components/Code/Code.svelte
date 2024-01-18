@@ -19,19 +19,8 @@
 
 <style>
 	:global(:root) {
+		--code-bg: var(--body-bg);
 		--code-tab-size: 2;
-	}
-
-	@media (prefers-color-scheme: light) {
-		:global(:root) {
-			--code-bg: var(--color-white);
-		}
-	}
-
-	@media (prefers-color-scheme: dark) {
-		:global(:root) {
-			--code-bg: var(--color-black);
-		}
 	}
 
 	pre.code {

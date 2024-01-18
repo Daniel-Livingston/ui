@@ -26,7 +26,7 @@
 		--form-error-font-weight: 400;
 		--form-error-line-height: var(--body-line-height);
 		--form-error-spacing-top: 0.25rem;
-		--form-input-border-color: rgba(var(--color-dark-rgb), 0.2);
+		--form-input-border-color: var(--border-color);
 		--form-input-border-width: 1px;
 		--form-input-color: var(--color-dark);
 		--form-input-font-family: var(--sans-serif);

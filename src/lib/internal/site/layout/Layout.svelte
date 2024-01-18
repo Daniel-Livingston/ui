@@ -66,6 +66,10 @@
 		padding-inline: 1rem;
 	}
 
+	.header {
+		border-bottom: 1px solid var(--border-color);
+	}
+
 	.header :global(.h1) {
 		--h1-spacing-top: 3rem;
 		--h1-spacing-bottom: 3rem;
@@ -110,20 +114,12 @@
 		.content {
 			background-color: var(--color-light);
 		}
-
-		.header {
-			border-bottom: 1px solid rgba(var(--color-dark-rgb), 0.2);
-		}
 	}
 
 	@media (prefers-color-scheme: dark) {
 		.header,
 		.content {
 			background-color: var(--color-gray-900);
-		}
-
-		.header {
-			border-bottom: 1px solid rgba(var(--color-light-rgb), 0.2);
 		}
 	}
 

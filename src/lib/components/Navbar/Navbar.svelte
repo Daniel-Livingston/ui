@@ -12,21 +12,10 @@
 
 <style>
 	:global(:root) {
+		--navbar-border-color: var(--border-color);
 		--navbar-border-width: 1px;
 		--navbar-padding-x: 1rem;
 		--navbar-padding-y: 0.5rem;
-	}
-
-	@media (prefers-color-scheme: light) {
-		:global(:root) {
-			--navbar-border-color: rgba(var(--color-dark-rgb), 0.2);
-		}
-	}
-
-	@media (prefers-color-scheme: dark) {
-		:global(:root) {
-			--side-nav-item-border-color: rgba(var(--color-light-rgb), 0.2);
-		}
 	}
 
 	.navbar {

@@ -109,15 +109,19 @@ h6 {
 /* Theming. */
 @media (prefers-color-scheme: light) {
 	:root {
+		--alt-bg: var(--color-light);
 		--body-color: var(--color-black);
 		--body-bg: var(--color-white);
+		--border-color: rgba(var(--color-dark-rgb), 0.2);
 	}
 }
 
 @media (prefers-color-scheme: dark) {
 	:root {
+		--alt-bg: var(--color-gray-900);
 		--body-color: var(--color-white);
 		--body-bg: var(--color-black);
+		--border-color: rgba(var(--color-light-rgb), 0.2);
 	}
 }
 
