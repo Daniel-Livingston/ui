@@ -15,5 +15,5 @@
 </script>
 
 <Field class={classname} {description} {error} {id} {label} {required}>
-	<input type="datetime-local" class="form__input" bind:value {id} {...props} />
+	<input type="datetime-local" class="form__field__input" bind:value {id} {...props} />
 </Field>

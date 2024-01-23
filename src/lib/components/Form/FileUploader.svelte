@@ -15,5 +15,5 @@
 </script>
 
 <Field class={classname} {description} {error} {id} {label} {required}>
-	<input type="file" class="form__input" {id} bind:files {...props} />
+	<input type="file" class="form__field__input" {id} bind:files {...props} />
 </Field>

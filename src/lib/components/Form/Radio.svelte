@@ -26,24 +26,11 @@
 	inline
 	reverse
 >
-	<input type="radio" class="form__input form__radio" bind:group {id} {...props} />
+	<input type="radio" class="form__field__input form__radio" bind:group {id} {...props} />
 </Field>
 
 <style>
-	:global(:root) {
-		--form-radio-font-weight: 400;
-		--form-radio-gap: 0.25rem;
-	}
-
-	:global(.form__field.form__field-radio .form__label) {
-		font-weight: var(--form-radio-font-weight);
-	}
-
-	:global(.form__field-radio + .form__field.form__field-radio) {
-		margin-top: var(--form-radio-gap);
-	}
-
-	.form__input.form__radio {
+	.form__field__input {
 		margin: 0;
 		height: 1rem;
 		width: 1rem;

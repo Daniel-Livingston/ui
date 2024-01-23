@@ -15,5 +15,5 @@
 </script>
 
 <Field class={classname} {description} {error} {id} {label} {required}>
-	<input type="date" class="form__input" bind:value {id} {...props} />
+	<input type="date" class="form__field__input" bind:value {id} {...props} />
 </Field>

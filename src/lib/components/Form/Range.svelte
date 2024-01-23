@@ -24,7 +24,7 @@
 		<span class="form__range-min">{min}</span>
 		<input
 			type="range"
-			class="form__range form__input"
+			class="form__range form__field__input"
 			bind:value
 			{id}
 			{max}
@@ -44,7 +44,7 @@
 		margin-top: var(--form-label-spacing);
 	}
 
-	.form__input.form__range {
+	.form__field__input.form__range {
 		margin: 0;
 		padding: 0;
 		position: relative;

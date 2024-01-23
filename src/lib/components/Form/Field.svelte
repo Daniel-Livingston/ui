@@ -15,157 +15,169 @@
 	} = $props<FieldProps>();
 </script>
 
-<div
-	class={classNames('form__field', classname)}
-	class:error
-	class:inline
-	class:required
-	class:reverse
->
-	<label for={id} class="form__label">{label}</label>
+{#snippet form_label()}
+	<label for={id} class="form__field__label">{label}</label>
+{/snippet}
 
-	{#if description}
-		<p class="form__description">{description}</p>
-	{/if}
+<div class={classNames('form__field', classname)} class:error class:inline class:required>
+	{#if inline}
+		{#if reverse}
+			<slot />
+			{@render form_label()}
+		{:else}
+			{@render form_label()}
+			<slot />
+		{/if}
+	{:else}
+		{@render form_label()}
+		{#if description}
+			<p class="form__field__description">{description}</p>
+		{/if}
 
-	<slot />
+		<slot />
 
-	{#if error}
-		<p class="form__error">{error}</p>
+		{#if error}
+			<p class="form__field__error">{error}</p>
+		{/if}
 	{/if}
 </div>
 
 <style>
 	:global(:root) {
-		--form-field-spacing-top: 1.25rem;
-		--form-field-description-font-family: var(--sans-serif);
-		--form-field-description-font-size: var(--font-size-sm);
-		--form-field-description-font-weight: 400;
-		--form-field-description-line-height: var(--body-line-height);
-		--form-field-description-spacing-top: 0.25rem;
-		--form-field-error-font-family: var(--sans-serif);
-		--form-field-error-font-size: var(--font-size-sm);
-		--form-field-error-font-weight: 400;
-		--form-field-error-line-height: var(--body-line-height);
-		--form-field-error-spacing-top: 0.25rem;
-
-		--form-input-bg: var(--alt-bg);
-		--form-input-border-color: var(--border-color);
-		--form-input-border-width: 1px;
-		--form-input-font-family: var(--sans-serif);
-		--form-input-font-size: var(--body-font-size);
-		--form-input-font-weight: 400;
-		--form-input-line-height: var(--body-line-height);
-		--form-input-padding-x: 0.75rem;
-		--form-input-padding-y: 0.5rem;
-		--form-input-focus-outline-color: var(--color-primary);
-		--form-input-focus-outline-offset: 2px;
-		--form-input-focus-outline-width: 2px;
-
-		--form-label-font-family: var(--sans-serif);
-		--form-label-font-size: var(--body-font-size);
-		--form-label-font-weight: 500;
-		--form-label-line-height: var(--body-line-height);
-		--form-label-spacing: 0.5rem;
-		--form-label-required-color: var(--color-danger);
-		--form-label-required-spacing: 0.25rem;
+		--form__field_spacing-y: 1.25rem;
+		--form__field__description_font-family: var(--sans-serif);
+		--form__field__description_font-size: var(--font-size-sm);
+		--form__field__description_font-weight: 400;
+		--form__field__error_color: var(--color-danger);
+		--form__field__error_font-family: var(--sans-serif);
+		--form__field__error_font-size: var(--font-size-sm);
+		--form__field__error_font-weight: 400;
+		--form__field__input_bg: var(--alt-bg);
+		--form__field__input_border-color: var(--border-color);
+		--form__field__input_border-width: 1px;
+		--form__field__input_color: var(--color-dark);
+		--form__field__input_font-family: var(--sans-serif);
+		--form__field__input_font-size: var(--body-font-size);
+		--form__field__input_font-weight: 400;
+		--form__field__input_padding-x: 0.75rem;
+		--form__field__input_padding-y: 0.5rem;
+		--form__field__input_spacing-y: 0.5rem;
+		--form__field__input_focus_outline-color: var(--color-primary);
+		--form__field__input_focus_outline-offset: 2px;
+		--form__field__input_focus_outline-width: 2px;
+		--form__field__input__placeholder_color: rgba(var(--color-dark-rgb), 0.5);
+		--form__field__label_font-family: var(--sans-serif);
+		--form__field__label_font-size: var(--body-font-size);
+		--form__field__label_font-weight: 500;
+		--form__field__label_spacing-y: 0.5rem;
+		--form__field__label_required_color: var(--color-danger);
+		--form__field__label_required_spacing-x: 0.25rem;
 	}
 
 	@media (prefers-color-scheme: light) {
 		:global(:root) {
-			--form-field-error-color: var(--color-danger);
-			--form-input-color: var(--color-black);
-			--form-input-placeholder-color: rgba(var(--color-dark-rgb), 0.5);
+			--form__field__error_color: var(--color-danger);
+			--form__field__input_color: var(--color-dark);
+			--form__field__input__placeholder_color: rgba(var(--color-dark-rgb), 0.5);
 		}
 	}
 
 	@media (prefers-color-scheme: dark) {
 		:global(:root) {
-			--form-field-error-color: var(--color-danger-300);
-			--form-input-color: var(--color-white);
-			--form-input-placeholder-color: rgba(var(--color-light-rgb), 0.5);
+			--form__field__error_color: var(--color-danger-300);
+			--form__field__input_color: var(--color-white);
+			--form__field__input__placeholder_color: rgba(var(--color-light-rgb), 0.5);
 		}
 
-		.form__field :global(.form__input) {
+		:where(.form__field) :global(:where(.form__field__input)) {
 			color-scheme: dark;
 		}
 	}
 
-	:global(.form__field) + :where(.form__field) {
-		margin-top: var(--form-field-spacing-top);
+	/* .form__field styles. */
+	:where(.form__field) {
+		margin-block: var(--form__field_spacing-y);
 	}
 
-	.form__field.inline {
-		align-items: center;
-		display: flex;
+	:where(.inline:not(:first-of-type)) {
+		margin-block-start: 0.25rem;
 	}
 
-	.form__field.reverse {
-		flex-direction: row-reverse;
-		gap: var(--form-label-spacing);
-		justify-content: flex-end;
+	:where(.inline:not(:last-of-type)) {
+		margin-block-end: 0.25rem;
 	}
 
-	.form__label {
+	/* .form__field__label styles. */
+	:where(.form__field__label) {
 		display: block;
-		font-family: var(--form-label-font-family);
-		font-size: var(--form-label-font-size);
-		font-weight: var(--form-label-font-weight);
-		line-height: var(--form-label-line-height);
+		font-family: var(--form__field__label_font-family);
+		font-size: var(--form__field__label_font-size);
+		font-weight: var(--form__field__label_font-weight);
+		margin-block: var(--form__field__label_spacing-y);
 	}
 
-	.form__description {
-		font-family: var(--form-field-description-font-family);
-		font-size: var(--form-field-description-font-size);
-		font-weight: var(--form-field-description-font-weight);
-		line-height: var(--form-field-description-line-height);
-		margin-top: var(--form-field-description-spacing-top);
-	}
-
-	.form__field.error :global(.form__input) {
-		border-color: var(--form-error-color);
-	}
-
-	.form__field.required .form__label::after {
+	:where(.required .form__field__label)::after {
 		content: '*';
-		color: var(--form-label-required-color);
-		margin-inline-start: var(--form-label-required-spacing);
+		color: var(--form__field__label_required_color);
+		margin-inline: var(--form__field__label_required_spacing-x);
 	}
 
-	.form__field :global(.form__input) {
-		background-color: var(--form-input-bg);
-		border: var(--form-input-border-width) solid var(--form-input-border-color);
-		color: var(--form-input-color);
+	:where(.inline .form__field__label) {
+		display: inline-block;
+		font-weight: 400;
+		margin-block: 0;
+		margin-inline-start: 0.5rem;
+	}
+
+	/* .form__field__description styles. */
+	:where(.form__field__description) {
+		font-family: var(--form__field__description_font-family);
+		font-size: var(--form__field__description_font-size);
+		font-weight: var(--form__field__description_font-weight);
+	}
+
+	/* .form__field__error styles. */
+	:where(.form__field__error) {
+		color: var(--form__field__error_color);
+		font-family: var(--form__field__error_font-family);
+		font-size: var(--form__field__error_font-size);
+		font-weight: var(--form__field__error_font-weight);
+	}
+
+	/* .form__field__input styles. */
+	:where(.form__field) :global(:where(.form__field__input)) {
+		background-color: var(--form__field__input_bg);
+		border: var(--form__field__input_border-width) solid var(--form__field__input_border-color);
+		color: var(--form__field__input_color);
 		display: block;
-		font-family: var(--form-input-font-family);
-		font-size: var(--form-input-font-size);
-		font-weight: var(--form-input-font-weight);
-		line-height: var(--form-input-line-height);
-		margin-top: var(--form-label-spacing);
-		padding: var(--form-input-padding-y) var(--form-input-padding-x);
+		font-family: var(--form__field__input_font-family);
+		font-size: var(--form__field__input_font-size);
+		font-weight: var(--form__field__input_font-weight);
+		margin-block: var(--form__field__input_spacing-y);
+		padding: var(--form__field__input_padding-y) var(--form__field__input_padding-x);
 		width: 100%;
 	}
 
-	.form__field :global(.form__input:focus) {
-		outline: var(--form-input-focus-outline-width) solid var(--form-input-focus-outline-color);
-		outline-offset: var(--form-input-focus-outline-offset);
+	:where(.inline) :global(:where(.form__field__input)) {
+		display: inline-block;
 	}
 
-	.form__field :global(.form__input::placeholder) {
-		color: var(--form-input-placeholder-color);
+	:where(.error) :global(:where(.form__field__input)) {
+		border-color: var(--form__field__error_color);
 	}
 
-	.form__field :global(.form__input::-ms-input-placeholder) {
-		color: var(--form-input-placeholder-color);
+	:where(.form__field) :global(:where(.form__field__input:focus)) {
+		outline: var(--form__field__input_focus_outline-width) solid
+			var(--form__field__input_focus_outline-color);
+		outline-offset: var(--form__field__input_focus_outline-offset);
+	}
+
+	:where(.form__field) :global(:where(.form__field__input::placeholder)) {
+		color: var(--form__field__input__placeholder_color);
+	}
+
+	:where(.form__field) :global(:where(.form__field__input::-ms-input-placeholder)) {
+		color: var(--form__field__input__placeholder_color);
 		opacity: 1;
-	}
-
-	.form__error {
-		color: var(--form-field-error-color);
-		font-family: var(--form-field-error-font-family);
-		font-size: var(--form-field-error-font-size);
-		font-weight: var(--form-field-error-font-weight);
-		line-height: var(--form-field-error-line-height);
-		margin-top: var(--form-field-error-spacing-top);
 	}
 </style>

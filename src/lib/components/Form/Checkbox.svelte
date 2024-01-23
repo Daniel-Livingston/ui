@@ -17,7 +17,7 @@
 </script>
 
 <Field
-	class={classNames('form__field-checkbox', classname)}
+	class={classNames('form__checkbox', classname)}
 	{description}
 	{error}
 	{id}
@@ -26,24 +26,11 @@
 	inline
 	reverse
 >
-	<input type="checkbox" class="form__input form__checkbox" bind:checked {id} {...props} />
+	<input type="checkbox" class="form__field__input" bind:checked {id} {...props} />
 </Field>
 
 <style>
-	:global(:root) {
-		--form-checkbox-font-weight: 400;
-		--form-checkbox-gap: 0.25rem;
-	}
-
-	:global(.form__field.form__field-checkbox .form__label) {
-		font-weight: var(--form-checkbox-font-weight);
-	}
-
-	:global(.form__field-checkbox + .form__field.form__field-checkbox) {
-		margin-top: var(--form-checkbox-gap);
-	}
-
-	.form__input.form__checkbox {
+	.form__field__input {
 		margin: 0;
 		height: 1rem;
 		width: 1rem;

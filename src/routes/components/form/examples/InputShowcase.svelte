@@ -25,6 +25,7 @@
 	<Form.NumberInput
 		id="number"
 		name="number"
+		description="Enter your favorite number."
 		label="Number input"
 		placeholder="Enter a number..."
 		bind:value={number}
@@ -35,8 +36,11 @@
 		name="email"
 		label="Email input"
 		placeholder="Enter email..."
+		error="Please enter a valid email address."
+		required
 		bind:value={email}
 	/>
+
 	<Form.Select id="select" name="select" label="Select input">
 		<Form.Option selected>Open this select menu</Form.Option>
 		<Form.Option value="1">One</Form.Option>
