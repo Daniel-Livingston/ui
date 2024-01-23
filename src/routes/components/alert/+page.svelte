@@ -3,12 +3,12 @@
 	import { Demo } from '$lib/internal/site/components';
 	import { fixCodeSnippet } from '$lib/internal/utils';
 
-	import SupportedVariantsExample from './examples/SupportedVariants.svelte';
-	import supportedVariantsExampleCode from './examples/SupportedVariants.svelte?raw';
-	import WithIconsExample from './examples/WithIcons.svelte';
-	import withIconsExampleCode from './examples/WithIcons.svelte?raw';
-	import DismissibleExample from './examples/Dismissible.svelte';
-	import dismissibleExampleCode from './examples/Dismissible.svelte?raw';
+	import Variants from './examples/Variants.svelte';
+	import variantsCode from './examples/Variants.svelte?raw';
+	import Icons from './examples/Icons.svelte';
+	import iconsCode from './examples/Icons.svelte?raw';
+	import Dismissible from './examples/Dismissible.svelte';
+	import dismissibleCode from './examples/Dismissible.svelte?raw';
 </script>
 
 <Heading id="overview" level={2}>Overview</Heading>
@@ -23,23 +23,23 @@
 <Heading id="variants" level={3}>Variants</Heading>
 
 <Demo>
-	<SupportedVariantsExample />
+	<Variants />
 </Demo>
 
-<CodeSnippet code={fixCodeSnippet(supportedVariantsExampleCode)} lang="html" highlighted />
+<CodeSnippet code={fixCodeSnippet(variantsCode)} lang="html" highlighted />
 
 <Heading id="with-icons" level={3}>With Icons</Heading>
 
 <Demo>
-	<WithIconsExample />
+	<Icons />
 </Demo>
 
-<CodeSnippet code={fixCodeSnippet(withIconsExampleCode)} lang="html" highlighted />
+<CodeSnippet code={fixCodeSnippet(iconsCode)} lang="html" highlighted />
 
 <Heading id="dismissible" level={3}>Dismissible</Heading>
 
 <Demo>
-	<DismissibleExample />
+	<Dismissible />
 </Demo>
 
-<CodeSnippet code={fixCodeSnippet(dismissibleExampleCode)} lang="html" highlighted />
+<CodeSnippet code={fixCodeSnippet(dismissibleCode)} lang="html" highlighted />

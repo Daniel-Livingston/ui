@@ -3,11 +3,11 @@
 	import { Demo } from '$lib/internal/site/components';
 	import { fixCodeSnippet } from '$lib/internal/utils';
 
-	import Variants from './examples/SupportedVariants.svelte';
-	import variantsCode from './examples/SupportedVariants.svelte?raw';
+	import Variants from './examples/Variants.svelte';
+	import variantsCode from './examples/Variants.svelte?raw';
 
-	import Sizes from './examples/SupportedSizes.svelte';
-	import sizesCode from './examples/SupportedSizes.svelte?raw';
+	import Sizes from './examples/Sizes.svelte';
+	import sizesCode from './examples/Sizes.svelte?raw';
 
 	import Rounded from './examples/Rounded.svelte';
 	import roundedCode from './examples/Rounded.svelte?raw';

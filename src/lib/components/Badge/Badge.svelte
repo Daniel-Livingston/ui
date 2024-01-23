@@ -6,101 +6,150 @@
 	let { size, variant, class: classname, ...props } = $props<BadgeProps>();
 </script>
 
-<span
-	class={classNames(
-		'badge',
-		{ [`badge-${size}`]: !!size },
-		{ [`badge-${variant}`]: !!variant },
-		classname
-	)}
-	{...props}
->
+<span class={classNames('badge', size, variant, classname)} {...props}>
 	<slot />
 </span>
 
 <style>
 	:global(:root) {
-		--badge-bg: transparent;
-		--badge-spacing-x: 0.5rem;
-		--badge-spacing-y: 0.15rem;
-		--badge-border-radius: 1rem;
+		--badge_bg: transparent;
+		--badge_color: var(--color-black);
+		--badge_font-family: var(--body-font-family);
+		--badge_font-size: var(--body-font-size);
+		--badge_font-weight: var(--body-font-weight);
+		--badge_padding-x: 0.5rem;
+		--badge_padding-y: 0.25rem;
+		--badge_border-radius: 1rem;
 
-		--badge-bg-primary: rgba(var(--color-primary-rgb), 0.8);
-		--badge-bg-secondary: rgba(var(--color-secondary-rgb), 0.8);
-		--badge-bg-success: rgba(var(--color-success-rgb), 0.8);
-		--badge-bg-danger: rgba(var(--color-danger-rgb), 0.8);
-		--badge-bg-warning: rgba(var(--color-warning-rgb), 0.8);
-		--badge-bg-info: rgba(var(--color-info-rgb), 0.8);
-		--badge-bg-light: rgba(var(--color-light-rgb), 0.8);
-		--badge-bg-dark: rgba(var(--color-dark-rgb), 0.8);
+		--badge_primary_bg: rgba(var(--color-primary-rgb), 0.8);
+		--badge_primary_color: var(--color-white);
+		--badge_secondary_bg: rgba(var(--color-secondary-rgb), 0.8);
+		--badge_secondary_color: var(--color-white);
+		--badge_success_bg: rgba(var(--color-success-rgb), 0.8);
+		--badge_success_color: var(--color-black);
+		--badge_danger_bg: rgba(var(--color-danger-rgb), 0.8);
+		--badge_danger_color: var(--color-white);
+		--badge_warning_bg: rgba(var(--color-warning-rgb), 0.8);
+		--badge_warning_color: var(--color-black);
+		--badge_info_bg: rgba(var(--color-info-rgb), 0.8);
+		--badge_info_color: var(--color-white);
+		--badge_light_bg: rgba(var(--color-light-rgb), 0.8);
+		--badge_light_color: var(--color-black);
+		--badge_dark_bg: rgba(var(--color-dark-rgb), 0.8);
+		--badge_dark_color: var(--color-white);
 
-		--badge-color-primary: var(--color-white);
-		--badge-color-secondary: var(--color-white);
-		--badge-color-success: var(--color-black);
-		--badge-color-danger: var(--color-white);
-		--badge-color-warning: var(--color-black);
-		--badge-color-info: var(--color-white);
-		--badge-color-light: var(--color-black);
-		--badge-color-dark: var(--color-white);
+		--badge_xs_font-size: 0.75rem;
+		--badge_xs_padding-x: 0.25rem;
+		--badge_xs_padding-y: 0.1rem;
+		--badge_sm_font-size: 0.875rem;
+		--badge_sm_padding-x: 0.35rem;
+		--badge_sm_padding-y: 0.125rem;
+		--badge_md_font-size: 1rem;
+		--badge_md_padding-x: 0.5rem;
+		--badge_md_padding-y: 0.25rem;
+		--badge_lg_font-size: 1.25rem;
+		--badge_lg_padding-x: 0.75rem;
+		--badge_lg_padding-y: 0.5rem;
+		--badge_xl_font-size: 1.5rem;
+		--badge_xl_padding-x: 1rem;
+		--badge_xl_padding-y: 0.75rem;
 	}
 
 	@media (prefers-color-scheme: light) {
 		:global(:root) {
-			--badge-color: var(--color-black);
+			--badge_color: var(--color-black);
 		}
 	}
 
 	@media (prefers-color-scheme: dark) {
 		:global(:root) {
-			--badge-color: var(--color-white);
+			--badge_color: var(--color-white);
 		}
 	}
 
 	.badge {
-		background-color: var(--badge-bg);
+		--_bg: var(--badge_bg);
+		--_color: var(--badge_color);
+		--_font-size: var(--badge_font-size);
+		--_padding-x: var(--badge_padding-x);
+		--_padding-y: var(--badge_padding-y);
+
+		background-color: var(--_bg);
 		border-radius: var(--badge-border-radius);
-		color: var(--badge-color);
-		font: inherit;
-		padding: var(--badge-spacing-y) var(--badge-spacing-x);
+		color: var(--_color);
+		font-family: var(--badge_font-family);
+		font-size: var(--_font-size);
+		font-weight: var(--badge_font-weight);
+		padding: var(--_padding-y) var(--_padding-x);
 	}
 
-	.badge-primary {
-		background-color: var(--badge-bg-primary);
-		color: var(--badge-color-primary);
+	.primary {
+		--_bg: var(--badge_primary_bg);
+		--_color: var(--badge_primary_color);
 	}
 
-	.badge-secondary {
-		background-color: var(--badge-bg-secondary);
-		color: var(--badge-color-secondary);
+	.secondary {
+		--_bg: var(--badge_secondary_bg);
+		--_color: var(--badge_secondary_color);
 	}
 
-	.badge-success {
-		background-color: var(--badge-bg-success);
-		color: var(--badge-color-success);
+	.success {
+		--_bg: var(--badge_success_bg);
+		--_color: var(--badge_success_color);
 	}
 
-	.badge-danger {
-		background-color: var(--badge-bg-danger);
-		color: var(--badge-color-danger);
+	.danger {
+		--_bg: var(--badge_danger_bg);
+		--_color: var(--badge_danger_color);
 	}
 
-	.badge-warning {
-		background-color: var(--badge-bg-warning);
-		color: var(--badge-color-warning);
+	.warning {
+		--_bg: var(--badge_warning_bg);
+		--_color: var(--badge_warning_color);
 	}
 
-	.badge-info {
-		background-color: var(--badge-bg-info);
-		color: var(--badge-color-info);
+	.info {
+		--_bg: var(--badge_info_bg);
+		--_color: var(--badge_info_color);
 	}
 
-	.badge-light {
-		background-color: var(--badge-bg-light);
-		color: var(--badge-color-light);
+	.light {
+		--_bg: var(--badge_light_bg);
+		--_color: var(--badge_light_color);
 	}
 
-	.badge-dark {
-		background-color: var(--badge-bg-dark);
-		color: var(--badge-color-dark);
+	.dark {
+		--_bg: var(--badge_dark_bg);
+		--_color: var(--badge_dark_color);
+	}
+
+	.xs {
+		--_font-size: var(--badge_xs_font-size);
+		--_padding-x: var(--badge_xs_padding-x);
+		--_padding-y: var(--badge_xs_padding-y);
+	}
+
+	.sm {
+		--_font-size: var(--badge_sm_font-size);
+		--_padding-x: var(--badge_sm_padding-x);
+		--_padding-y: var(--badge_sm_padding-y);
+	}
+
+	.md {
+		--_font-size: var(--badge_md_font-size);
+		--_padding-x: var(--badge_md_padding-x);
+		--_padding-y: var(--badge_md_padding-y);
+	}
+
+	.lg {
+		--_font-size: var(--badge_lg_font-size);
+		--_padding-x: var(--badge_lg_padding-x);
+		--_padding-y: var(--badge_lg_padding-y);
+	}
+
+	.xl {
+		--_font-size: var(--badge_xl_font-size);
+		--_padding-x: var(--badge_xl_padding-x);
+		--_padding-y: var(--badge_xl_padding-y);
 	}
 </style>
