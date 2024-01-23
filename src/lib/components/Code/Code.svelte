@@ -6,11 +6,11 @@
 </script>
 
 {#snippet codeMarkdown(contents)}
-	<pre class="code"><code class="hljs language-{lang}">{@html contents}</code></pre>
+	<pre class="code multiline"><code class="hljs language-{lang}">{@html contents}</code></pre>
 {/snippet}
 
 {#if inline}
-	<code class="code">{code}</code>
+	<code class="code inline">{code}</code>
 {:else if highlighted}
 	{@render codeMarkdown(highlight(code, lang))}
 {:else}
@@ -19,15 +19,15 @@
 
 <style>
 	:global(:root) {
-		--code-bg: var(--body-bg);
-		--code-tab-size: 2;
+		--code_bg: var(--body-bg);
+		--code_tab-size: 2;
 	}
 
-	pre.code {
-		tab-size: var(--code-tab-size);
+	:where(.multiline) {
+		tab-size: var(--code_tab-size);
 	}
 
-	pre.code code {
-		background-color: var(--code-bg);
+	:where(.multiline > code) {
+		background-color: var(--code_bg);
 	}
 </style>
