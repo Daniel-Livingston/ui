@@ -16,12 +16,7 @@
 	let dismissed = $state(false);
 </script>
 
-<div
-	class={classNames('alert', `alert-${variant}`, classname)}
-	class:dismissed
-	{...props}
-	role="alert"
->
+<div class={classNames('alert', variant, classname)} class:dismissed {...props} role="alert">
 	{#if Icon}
 		<div class="alert-icon-wrapper">
 			<Icon class="alert-icon" color="var(--_icon-color)" />
@@ -145,56 +140,56 @@
 		padding: var(--alert_padding-y) var(--alert_padding-x);
 	}
 
-	:where(.alert-primary) {
+	:where(.primary) {
 		--_bg: var(--alert_primary_bg);
 		--_border-color: var(--alert_primary_border-color);
 		--_color: var(--alert_primary_color);
 		--_icon-color: var(--alert__icon_primary_color);
 	}
 
-	:where(.alert-secondary) {
+	:where(.secondary) {
 		--_bg: var(--alert_secondary_bg);
 		--_border-color: var(--alert_secondary_border-color);
 		--_color: var(--alert_secondary_color);
 		--_icon-color: var(--alert__icon_secondary_color);
 	}
 
-	:where(.alert-success) {
+	:where(.success) {
 		--_bg: var(--alert_success_bg);
 		--_border-color: var(--alert_success_border-color);
 		--_color: var(--alert_success_color);
 		--_icon-color: var(--alert__icon_success_color);
 	}
 
-	:where(.alert-danger) {
+	:where(.danger) {
 		--_bg: var(--alert_danger_bg);
 		--_border-color: var(--alert_danger_border-color);
 		--_color: var(--alert_danger_color);
 		--_icon-color: var(--alert__icon_danger_color);
 	}
 
-	:where(.alert-warning) {
+	:where(.warning) {
 		--_bg: var(--alert_warning_bg);
 		--_border-color: var(--alert_warning_border-color);
 		--_color: var(--alert_warning_color);
 		--_icon-color: var(--alert__icon_warning_color);
 	}
 
-	:where(.alert-info) {
+	:where(.info) {
 		--_bg: var(--alert_info_bg);
 		--_border-color: var(--alert_info_border-color);
 		--_color: var(--alert_info_color);
 		--_icon-color: var(--alert__icon_info_color);
 	}
 
-	:where(.alert-light) {
+	:where(.light) {
 		--_bg: var(--alert_light_bg);
 		--_border-color: var(--alert_light_border-color);
 		--_color: var(--alert_light_color);
 		--_icon-color: var(--alert__icon_light_color);
 	}
 
-	:where(.alert-dark) {
+	:where(.dark) {
 		--_bg: var(--alert_dark_bg);
 		--_border-color: var(--alert_dark_border-color);
 		--_color: var(--alert_dark_color);
