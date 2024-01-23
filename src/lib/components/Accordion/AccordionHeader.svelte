@@ -23,41 +23,36 @@
 </svelte:element>
 
 <style>
-	.accordion__header {
-		margin: 0;
-		padding: 0;
+	:where(.accordion__header) {
+		background-color: var(--accordion__header_bg);
+		font-family: var(--accordion__header_font-family);
+		font-size: var(--accordion__header_font-size);
+		font-weight: var(--accordion__header_font-weight);
 	}
 
-	.accordion__header.open {
-		border-bottom: var(--accordion-button-border-width) solid var(--accordion-button-border-color);
-		color: var(--accordion-button-color-open);
+	:where(.open) {
+		background-color: var(--accordion__header_open_bg);
+		border-bottom: var(--_border);
+		color: var(--accordion__header_open_color);
 	}
 
-	.accordion__header.open .accordion__button {
-		background-color: var(--accordion-button-bg-open);
-	}
-
-	.accordion__button {
+	:where(.accordion__button) {
 		align-items: center;
-		background-color: var(--accordion-button-bg);
+		background: none;
 		border: none;
 		color: inherit;
+		cursor: pointer;
 		display: flex;
-		font: var(--accordion-header-font-weight) var(--accordion-header-font-size) /
-			var(--accordion-header-line-height) var(--accordion-header-font-family);
+		font: inherit;
 		justify-content: space-between;
-		padding: var(--accordion-header-padding);
+		padding: var(--accordion__header_padding-y) var(--accordion__header_padding-x);
 		text-align: start;
 		width: 100%;
 	}
 
-	.accordion__button:not(:disabled) {
-		cursor: pointer;
-	}
-
-	.accordion__button:focus {
-		outline: var(--accordion-button-focus-outline-width) solid
-			var(--accordion-button-focus-outline-color);
-		outline-offset: var(--accordion-button-focus-ouline-offset);
+	:where(.accordion__button:focus) {
+		outline: var(--accordion__button_focus_outline-width) solid
+			var(--accordion__button_focus_outline-color);
+		outline-offset: var(--accordion__button_focus_ouline-offset);
 	}
 </style>

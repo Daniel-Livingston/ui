@@ -20,6 +20,6 @@
 
 <style>
 	.accordion__content {
-		padding: var(--accordion-content-padding, 1rem 0.75rem);
+		padding: var(--accordion__content_padding-y) var(--accordion__content_padding-x);
 	}
 </style>

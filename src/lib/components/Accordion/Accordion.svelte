@@ -15,38 +15,37 @@
 
 <style>
 	:global(:root) {
-		--accordion-button-bg: transparent;
-		--accordion-button-border-color: var(--border-color);
-		--accordion-button-border-width: 1px;
-		--accordion-button-color: inherit;
-		--accordion-button-focus-outline-color: var(--color-primary);
-		--accordion-button-focus-outline-offset: 2px;
-		--accordion-button-focus-outline-width: 2px;
-
-		--accordion-content-padding: 1rem 0.75rem;
-
-		--accordion-header-font-family: var(--sans-serif);
-		--accordion-header-font-size: var(--body-font-size);
-		--accordion-header-font-weight: 500;
-		--accordion-header-line-height: var(--body-line-height);
-		--accordion-header-padding: 0.75rem;
-
-		--accordion-item-border-color: var(--border-color);
-		--accordion-item-border-width: 1px;
+		--accordion_border-color: var(--border-color);
+		--accordion_border-width: 1px;
+		--accordion_spacing: 0.75rem;
+		--accordion__header_bg: transparent;
+		--accordion__header_font-family: var(--sans-serif);
+		--accordion__header_font-size: var(--body-font-size);
+		--accordion__header_font-weight: 500;
+		--accordion__header_padding-x: var(--accordion_spacing);
+		--accordion__header_padding-y: var(--accordion_spacing);
+		--accordion__button_focus_outline-color: var(--color-primary);
+		--accordion__button_focus_outline-offset: 2px;
+		--accordion__button_focus_outline-width: 2px;
+		--accordion__content_padding-x: var(--accordion_spacing);
+		--accordion__content_padding-y: var(--accordion_spacing);
 	}
 
-	/* Theming. */
 	@media (prefers-color-scheme: light) {
 		:global(:root) {
-			--accordion-button-bg-open: var(--color-light);
-			--accordion-button-color-open: var(--color-primary-700);
+			--accordion__header_open_bg: var(--color-light);
+			--accordion__header_open_color: var(--color-primary-700);
 		}
 	}
 
 	@media (prefers-color-scheme: dark) {
 		:global(:root) {
-			--accordion-button-bg-open: var(--color-gray-900);
-			--accordion-button-color-open: var(--color-primary-300);
+			--accordion__header_open_bg: var(--color-gray-900);
+			--accordion__header_open_color: var(--color-primary-300);
 		}
+	}
+
+	.accordion {
+		--_border: var(--accordion_border-width) solid var(--accordion_border-color);
 	}
 </style>

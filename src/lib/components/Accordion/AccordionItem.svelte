@@ -19,13 +19,11 @@
 </div>
 
 <style>
-	.accordion__item {
-		border: var(--accordion-item-border-width) solid var(--accordion-item-border-color);
-		border-left: none;
-		border-right: none;
+	:where(.accordion__item) {
+		border-top: var(--_border);
 	}
 
-	:global(.accordion__item) + .accordion__item {
-		border-top: none;
+	:where(.accordion__item:last-of-type) {
+		border-bottom: var(--_border);
 	}
 </style>
