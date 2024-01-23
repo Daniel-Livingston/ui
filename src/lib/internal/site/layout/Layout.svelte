@@ -71,8 +71,8 @@
 	}
 
 	.header :global(.h1) {
-		--h1-spacing-top: 3rem;
-		--h1-spacing-bottom: 3rem;
+		--h1_spacing-top: 3rem;
+		--h1_spacing-bottom: 3rem;
 	}
 
 	.content {
@@ -102,11 +102,11 @@
 	}
 
 	.readable > :global(*) + :global(.heading) {
-		--h2-spacing-top: 2rem;
-		--h3-spacing-top: 2rem;
-		--h4-spacing-top: 2rem;
-		--h5-spacing-top: 2rem;
-		--h6-spacing-top: 2rem;
+		--h2_spacing-top: 2rem;
+		--h3_spacing-top: 2rem;
+		--h4_spacing-top: 2rem;
+		--h5_spacing-top: 2rem;
+		--h6_spacing-top: 2rem;
 	}
 
 	@media (prefers-color-scheme: light) {
