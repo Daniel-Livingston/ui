@@ -1,0 +1,8 @@
+@media (prefers-color-scheme: light) {
+	:root {
+		--alt-bg: var(--color-light);
+		--body-color: var(--color-black);
+		--body-bg: var(--color-white);
+		--border-color: rgba(var(--color-dark-rgb), 0.2);
+	}
+}

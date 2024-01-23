@@ -1,0 +1,9 @@
+.collapsible {
+	height: auto;
+	overflow: auto;
+}
+
+.collapsible.collapsed {
+	height: 0;
+	overflow: hidden;
+}
