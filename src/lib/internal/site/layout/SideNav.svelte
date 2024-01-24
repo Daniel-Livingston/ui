@@ -31,6 +31,7 @@
 					{ id: 'alert', label: 'Alert', href: '/components/alert' },
 					{ id: 'badge', label: 'Badge', href: '/components/badge' },
 					{ id: 'button', label: 'Button', href: '/components/button' },
+					{ id: 'card', label: 'Card', href: '/components/card' },
 					{ id: 'checkbox', label: 'Checkbox', href: '/components/checkbox' },
 					{ id: 'code', label: 'Code', href: '/components/code' },
 					{ id: 'date-picker', label: 'Date Picker', href: '/components/date-picker' },
