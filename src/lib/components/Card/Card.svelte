@@ -82,6 +82,34 @@
 		--card_rounded_border-radius: 0.25rem;
 	}
 
+	@media (prefers-color-scheme: light) {
+		:global(:root) {
+			--card_bg: var(--color-white);
+			--card_border-color: var(--border-color);
+
+			--card__header_bg: var(--color-light);
+			--card__header_border-color: var(--border-color);
+
+			--card__title_color: var(--color-black);
+
+			--card__subtitle_color: var(--color-dark);
+		}
+	}
+
+	@media (prefers-color-scheme: dark) {
+		:global(:root) {
+			--card_bg: var(--color-black);
+			--card_border-color: var(--border-color);
+
+			--card__header_bg: var(--color-gray-900);
+			--card__header_border-color: var(--border-color);
+
+			--card__title_color: var(--color-white);
+
+			--card__subtitle_color: var(--color-gray-300);
+		}
+	}
+
 	:where(.card) {
 		background-color: var(--card_bg);
 	}

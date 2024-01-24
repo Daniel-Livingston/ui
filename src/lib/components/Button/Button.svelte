@@ -46,11 +46,11 @@
 		--button_focus_outline-width: 2px;
 		--button_hover_bg: rgba(var(--color-black-rgb), 0.1);
 
-		--button_primary_bg: var(--color-primary);
-		--button_primary_border-color: var(--color-primary);
+		--button_primary_bg: var(--color-primary-700);
+		--button_primary_border-color: var(--color-primary-700);
 		--button_primary_color: var(--color-white);
-		--button_primary_focus_outline-color: var(--color-primary);
-		--button_primary_hover_bg: rgba(var(--color-primary-rgb), 0.9);
+		--button_primary_focus_outline-color: var(--color-primary-700);
+		--button_primary_hover_bg: rgba(var(--color-primary-700-rgb), 0.9);
 
 		--button_secondary_bg: var(--color-secondary);
 		--button_secondary_border-color: var(--color-secondary);
